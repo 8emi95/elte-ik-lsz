@@ -1,0 +1,85 @@
+https://www.facebook.com/groups/1114994961942403/permalink/1260397557402142/
+
+16172 ev logika
+defik:
+- Gondolkodás forma fogalma (1) (talán? ez örökzöld)
+- Az ítéletlogika leíró nyelvének abc-je
+- Literál fogalma
+- Formula igazságtáblája (fogalom)
+- szemantikus következmény? (fogalom)
+- Előre, visszakövetkeztetés (kifejtősben is )
+- Függvény def (logikában) 
+- Logikailag igaz vs Tautológia (56-57 , +kapcsolatuk)
+- Horn klóz/logika? 
+- Skolem formula
++megj: ha segít, a SZÁMELMÉLET első 5-6 kérdése a kidolgozás első 50 kérdéseiből van ált.
+abból már be lehet húzni a beugrót nagyjából ...
+
+170608 számításelmélet
+defik:
+- Define DeterminisztikusTuring gép (az átmenet függvényekkel is)
+- Turing gép megállási problémája (+eldönthető-e)
+- Egyértelmű környezetfüggetlen nyelvtanról (44.+45.+46? nem a bizonyítás ...)
+- Mit jelent az, hogy valami polinom időkorlátos... ?!
+- Utazóügynök probléma (nyelv define)
+kifejtős: 
+- Többszalagos Turing gép visszavezethető egyszalagosra
+- Független csúcshalmazokkal kapcsolatban valami...
+
+???? idk
+- Mi a literál, KNF és DNF? Írj mindegyikre példát!
+- Definiáld a Prenex- és Skolem-formulákat! Írj rájuk példát!
+- Szemantikus következmény nulladrendű logikában, fí igazságértékelés függvény, szemantikus fa definíciója és mire használható, szemantikus következményhez kapcsolódó tételek (ez egy kifejtős)
+- Halmaz számosság fogalma, Cantor-Bernstein tétel
+- Mit jelent az, hogy zártság polinom idejű visszavezetésben?
+- Írj le tetszőleges gráfokhoz kapcsolódó NP-teljes problémát!
+- Definiáld az Látló nyelvet, visszavezethető-e rá eldönthető nyelv? miért?
+- Cook-tétel, SAT probléma definíciója, NP-teljessége, NP-teljesség bizonyítása (kifejtős)
+
+******************************************
+
+https://www.facebook.com/groups/1114994961942403/permalink/1277103802398184/
+
+170629 számításelmélet
+01. Éles korlát , polinom nagyságrendje 
+02. 3 szalagú TG kezdőkonfigurációja , és átmenet fv
+03. Mikor dönti el NTG az L nyelvet ? L nyelvet eldönti egy NTG f(n) = 2^n +3n időigénnyel.következik -e ebből hogy L eleme NP Vagy nem? Miért? 
+04. Definiálja a megállási problémát . Van-e olyan eldönthető nyelv amely visszavezethető Lh-ra ?
+05. Mikor van D halmaznak egy megoldása , és a másik része , hogy LPMP komplementere Eleme e RE-nek? Vagy nem ? Miért?
+06. Time(f(n)) , NTime(f(n)) defje , és kérdés h létezik e NP/R nyelv . Ha igen adjon meg 1et , ha nem akkor miért ?
+07. NP-nehéz probléma defje.NP teljes probléma defje , mi a két elégséges feltétele annak, h L2 NP teljes ha tudjuk , hogy L1 NP-teljes
+08. Mit jelent , hogy egy gráf k szinezhető , milyen bonyolultsági tételt tud mondani kszinezhetőségre
+09. Offline TG defje, tárigénye , és mit jelent h f(n) a tárigénye
+10. Elér probléma defje és a hozzá kapcsolodó tétel
+
+Kifejtosok: 
+11. Mikor ekvivalens 2 TG . NTG es TG időigénye közötti tétel és annak bizonyítása
+12. Mi a független csúcshalmaz , a probléma defje es annak bonyolultsága (NP-teljes) és annak bizonyítása
+
+******************************************
+
+https://www.facebook.com/groups/1114994961942403/permalink/1450537635054799/
+
+szemantikus következmény
+eldöntés probléma mind 0-ad
+mind elsőrendű logikában
+fi-s cucc
+prenexes vagy az H-betűs rész logika végén
+[gyakorlati]
+termfa levezetése egy példán
+szemantikus fa levezetése példán
+egy művelet hatásköre
+írj fel példát knf-revagy kknf-re vagy dnf-re vagy kdnf-re
+írj fel példát helyes következtetésformára
+írj fel egy formulát, amiben vannak kötött, szabad, vegyes változók
+
+******************************************
+
+https://www.facebook.com/groups/1114994961942403/permalink/1273163446125553/
+Adja meg a Turing gépek tanult { 0, 1} ábécé feletti kódolását! Mi következik a kódolás létezéséből RE-re nézve? Miért?
+
+https://www.facebook.com/groups/1114994961942403/permalink/1268232526618645/
+Mikor nevezünk egy gráfot k-színezhetőnek? Mondja ki és bizonyítsa be a tanult k-színezhetőséggel kapcsolatos bonyolultsági tételt!
+
+https://www.facebook.com/groups/1114994961942403/permalink/1250786651696566/
+lsz_v_170601

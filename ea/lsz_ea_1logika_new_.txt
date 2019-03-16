@@ -1,0 +1,2433 @@
+﻿
+
+Logika és számításelmélet
+I. rész Logika
+
+
+
+
+
+
+
+Tejfel Máté
+Déli épület, 2.606 matej@inf.elte.hu http://matej.web.elte.hu
+
+
+
+
+
+
+
+
+Bevezető fogalmak
+
+
+Ítéletlogika
+Ítéletlogika leíró nyelve – Ábécé
+Ítéletlogika leíró nyelve – Szintaxis
+Ítéletlogika leíró nyelve – Szemantika
+
+
+
+Halmazok direktszorzata
+A és B tetszőleges halmazok direkt vagy Descartes szorzata A × B
+az összes olyan (a, b) párok hamaza, ahol a ∈ A és b ∈ B.
+U n-nel jelöljük U -nak önmagával vett n-szeres direktszorzatát, ami az U elemeiből képezhető összes n elemű sorozatok halmaza
+(U 2 = U × U ).
+
+
+
+
+
+Függvény fajtái
+Legyen D a függvény értelmezési tartománya, R az értékkészlete. Valamint legyen U egy tetszőleges (individuum)halmaz.
+• Ha D = U , akkor a függvény egyváltozós,
+• ha D = U n (n > 1), akkor n változós,
+• ha R = N, akkor a függvény egészértékű,
+• ha R = {i, h}, akkor a függvény logikai függvény, más néven reláció,
+• ha D = Rn (azaz a függvény általános alakja:  U n → U ), akkor a függvény matematikai függvény, más néven művelet,
+• az {i, h}n  → {i, h} alakú függvény logikai művelet.
+
+
+
+
+
+A lehetséges kétváltozós logikai műveletek közös igazságtáblája.
+
+
+A táblázat tartalmazza a 16 db 2-változós műveletet (a 4 db 1- és a 2 db 0-változós művelet is köztük van).  Ezekből a logika tárgyalásánál a ¬, ∧, ∨, ⊃ műveleteket használjuk csak.
+
+
+
+
+
+
+
+
+
+Nyelv =
+
+Ábécé + Szintaxis + Szemantika
+
+
+
+Szerkezeti rekurzió
+• definíciós módszer
+• alaplépés + rekurzív lépés
+  • példa:  logikai formulákon értelmezett függvények definíciója Szerkezeti indukció
+• bizonyítási módszer rekurzívan definiált struktúrák tulajdonságairól
+• alaplépés + indukciós lépés
+• speciális példa:  teljes indukció
+• példa:  logikai formulák tulajdonságainak bizonyítása
+
+
+
+
+
+
+
+• A logika tárgya az emberi gondolkodás vizsgálata.
+• A logika célkitűzése.
+Gondolkodási folyamatok vizsgálata során
+a helyes következtetés törvényeinek feltárása, újabb helyes következtetési módszerek kidolgozása.
+
+
+
+
+
+
+
+
+
+
+
+
+Bevezető fogalmak
+
+
+Ítéletlogika
+Ítéletlogika leíró nyelve – Ábécé
+Ítéletlogika leíró nyelve – Szintaxis
+Ítéletlogika leíró nyelve – Szemantika
+
+
+
+
+
+Tárgya az egyszerű állítások és a belőlük logikai műveletekkel kapott összetett állítások vizsgálata.
+
+
+  Tartalom	
+
+
+
+
+
+
+Ítéletlogika
+Ítéletlogika leíró nyelve – Ábécé
+Ítéletlogika leíró nyelve – Szintaxis
+Ítéletlogika leíró nyelve – Szemantika
+
+
+
+
+
+
+
+
+
+
+
+  Tartalom	
+
+
+
+
+
+
+Ítéletlogika
+Ítéletlogika leíró nyelve – Ábécé
+Ítéletlogika leíró nyelve – Szintaxis
+Ítéletlogika leíró nyelve – Szemantika
+
+
+
+
+
+
+
+Ítéletlogikai formula (Tk.4.1.2 def.)
+1 (alaplépés) Minden ítéletváltozó ítéletlogikai formula. (prímformula)
+2 (rekurziós lépés)
+• Ha A ítéletlogikai formula, akkor ¬A is az.
+• Ha A és B ítéletlogikai formulák, akkor (A ◦ B) is ítéletlogikai formula ”◦” a három binér művelet bármelyike.
+3 Minden ítéletlogikai formula az 1, 2 szabályok véges sokszori alkalmazásával áll elő.
+
+
+
+
+
+
+Ítéletlogikában a következő formulaszerkezeteket különböztetjük meg:
+• ¬A negációs
+• A ∧ B konjukciós
+• A ∨ B diszjunkciós
+• A ⊃ B implikációs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Szerkezeti fa egy példa formulához:
+
+(((X ⊃ Y ) ∧ (Y ⊃ Z))⊃(¬X ∨ Z))
+((X ⊃ Y )∧(Y ⊃ Z))	(¬X∨Z)
+
+
+(X⊃Y )
+XY
+
+(Y ⊃Z)
+
+
+YZ
+
+¬X	Z
+
+
+X
+
+
+
+
+
+
+A teljesen zárójelezett formulákat kevesebb zárójellel írhatjuk fel, ha bevezetjük a műveletek prioritását:  ¬, ∧, ∨, ⊃ (csökkenő sorrend).
+
+A zárójelelhagyás1 célja egy formulából a legtöbb zárójel elhagyása a formula szerkezetének megtartása mellett.
+
+
+
+
+
+
+
+1Tk. 52. o.
+
+
+
+
+
+Lépései:
+1 A formula külső zárójel párjának elhagyása (ha még van ilyen).
+2 Egy binér logikai összekötő hatáskörébe eső részformulák külső zárójelei akkor hagyhatók el, ha a részformula fő logikai
+összekötőjele nagyobb prioritású nála.
+
+
+
+
+
+
+
+
+• Konjunkciós:  A1 ∧ A2 ∧ . . . ∧ An (tetszőlegesen zárójelezhető)
+• Diszjunkciós:  A1 ∨ A2 ∨ . . . ∨ An (tetszőlegesen zárójelezhető)
+• Implikációs:  A1 ⊃ A2 ⊃ . . . ⊃ An (default zárójelezése jobbról-balra) A1 ⊃ (A2 ⊃ . . . (An−1 ⊃ An) . . .)
+
+
+
+
+
+
+
+
+
+
+
+
+
+Egy A formula logikai összetettsége:  A(A)
+
+
+
+
+
+Példa
+A (X	Y )  (Y	Z)	X	Z formula	műveletet tartalmazó részformulái:
+1   A[(X	Y )  (Y	Z)	X	Z] = 6
+2   A[(X	Y )  (Y	Z)] = 3
+Ezek közül a 2.  formula az	hatásköre.  Egy művelet hatáskörébe eső formulák egyben közvetlen komponensek is.
+
+
+
+
+
+
+
+
+Ítéletlogika
+Ítéletlogika leíró nyelve – Ábécé
+Ítéletlogika leíró nyelve – Szintaxis
+Ítéletlogika leíró nyelve – Szemantika
+
+
+
+
+
+
+A nyelv ábécéjének értelmezése (interpretációja - modellezése).
+Az ítéletlogika ábécéjében már csak az ítéletváltozókat kell interpretálni.  Az ítéletváltozók befutják az állítások halmazát.  Ha megmondjuk melyik ítéletváltozó melyik állítást jelenti, akkor a változó igazságértékét adtuk meg.  Annak rögzítését melyik
+ítéletváltozó i(gaz) és melyik h(amis) igazságértékű
+interpretációnak nevezzük.
+
+
+
+
+I(x) jelöli az x ítéletváltozó értékét az I interpretációban.
+n db ítéletváltozó interpretációinak száma 2n.
+Megadása:
+• Felsorolással
+• Szemantikus fával
+• Stb.
+n = 3 esetén legyenek az ítéletváltozók X, Y, Z.  Ezen változók egy sorrendjét bázisnak nevezzük.  Legyen most a bázis X, Y, Z.  Ekkor az összes interpretációt megadhatjuk táblázatos felsorolással, vagy szemantikus fával is.
+
+
+
+
+X
+Y
+Z
+i
+i
+i
+i
+i
+h
+i
+h
+i
+i
+h
+h
+h
+i
+i
+h
+i
+h
+h
+h
+i
+h
+h
+h
+
+
+táblázat: Interpretáció
+
+megadása táblázattal X, Y, Z bázis esetén
+
+
+
+
+
+Szemantikus fa
+Egy n-változós szemantikus fa egy n-szintű bináris fa, ahol a szintek a bázisbeli változóknak vannak megfeleltetve.  Egy X változó szintjén a csúcsokból kiinduló élpárokhoz X, ¬X címkéket rendelünk.  X jelentése X igaz, ¬X jelentése X hamis az élhez tartozó interpretációkban, így egy n-szintű szemantikus fa ágain az
+összes (2n ) lehetséges igazságkiértékelés (I interpretáció) megjelenik.
+
+
+
+
+Szemantikus fa az X, Y, Z logikai változókra, mint bázisra:
+
+iii	iih	ihi	ihh	hii	hih	hhi	hhh
+
+
+
+
+
+
+Formula helyettesítési értéke I interpretációban:  BI (C).
+
+
+
+
+
+
+Formula igazságtáblája
+Egy n-változós formula igazságtáblája egy olyan n + 1 oszlopból
+és 2n + 1 sorból álló táblázat, ahol a fejlécben a bázis (a formula változói rögzített sorrendben) és a formula szerepel.  A sorokban a változók alatt az interpretációk (a változók igazságkiértékelései), a formula alatt a formula helyettesítési
+értékei találhatók.
+
+
+Egy n-változós formula az igazságtáblájával megadott   i, h  n	i, h n-változós logikai műveletet ír le.
+
+X
+Y
+Z
+(¬(Z ⊃ ¬X) ∨ Y )
+i
+i
+i
+i
+i
+i
+h
+i
+i
+h
+i
+i
+i
+h
+h
+h
+h
+i
+i
+i
+h
+i
+h
+i
+h
+h
+i
+h
+h
+h
+h
+h
+táblázat: A (¬(Z ⊃ ¬X) ∨ Y ) formula igazságtáblája
+Egy formula igazhalmaza azon	interpretációk halmaza, amelyekre a formula helyettesítési értéke igaz.
+Egy formula hamishalmaza azon	interpretációk halmaza, amelyekre a formula helyettesítési értéke hamis.
+
+
+Logika és számításelmélet
+I. rész Logika
+Második előadás
+
+
+
+
+Ítéletlogika - Szemantika (folytatás)
+
+
+Formulák és formulahalmazok szemantikus tulajdonságai
+
+
+Szemantikus következményfogalom
+
+
+Formalizálás az ítéletlogikában
+
+
+
+
+Egy formula igaz-/hamishalmazának előállításához keressük a formula bázisának interpretációira azokat a feltételeket, amelyek biztosítják, hogy ő az igazhalmaz illetve a hamishalmaz eleme legyen.
+Ennek eszköze a ϕAα igazságértékelés függvény (α = i vagy h), amely egy A formula esetén az igazságtábla felírása nélkül megadja a formula közvetlen részformuláin keresztül az A interpretációira vonatkozó ϕAi és a ϕAh  feltételeket, amelyeket teljesítő interpretációkban a formula értéke i vagy h lesz.
+A ϕAα függvény értelmezési tartománya a formulák halmaza
+értékkészlete a formula interpretációira vonatkozó feltételek.
+
+
+A ϕ-igazságértékelés függvény definiálása szerkezeti rekurzióval
+1 Ha A prímformula (ítéletváltozó), akkor ϕAi  feltételt pontosan azok az I interpretációk teljesítik, amelyekben I(A) = i, a ϕAh  feltételt pedig azok, amelyekben I(A) = h.
+2 A ϕ(  A)  feltételek pontosan akkor teljesülnek, ha teljesülnek a ϕAh  feltételek.
+3 A ϕ(A	B)i  feltételek pontosan akkor teljesülnek, ha teljesülnek mind a ϕAi, mind a ϕBi  feltételek.
+4 A ϕ(A	B)i  feltételek pontosan akkor teljesülnek, ha teljesülnek a ϕAi  vagy a ϕBi  feltételek.
+5 A ϕ(A	B)i  feltételek pontosan akkor teljesülnek, ha teljesülnek a ϕAh  vagy a ϕBi  feltételek.
+
+A ϕ(¬A)h, a ϕ(A ∧ B)h, a ϕ(A ∨ B)h, és a ϕ(A ⊃ B)h feltételek
+értelemszerűen adódnak.
+
+
+ϕ(A ∧ B)i
+
+
+
+ϕ(¬A)i
+
+ϕAh
+
+ϕAi
+
+
+ϕBi
+
+
+
+
+ϕ(A ∨ B)i
+ϕAi	ϕBi
+
+ϕ(A ⊃ B)i
+
+	
+ϕAh	ϕBi
+
+
+
+ϕXh	ϕ(Y ∧ Z ∨ ¬X)i
+(diszjunkciós)
+
+
+ϕ(Y ∧ Z)i
+(konjukciós)
+ϕY i
+ϕZi
+
+ϕ¬Xi
+(negációs)
+
+
+ϕXh
+
+
+
+ϕXh	ϕ(Y ∧ Z ∨ ¬X)i
+(diszjunkciós)
+
+
+ϕ(Y ∧ Z)i
+(konjukciós)
+ϕY i
+ϕZi
+
+ϕ¬Xi
+(negációs)
+
+
+ϕXh
+
+
+1.ág
+2.ág
+3.ág
+X
+Y
+Z
+X
+Y
+Z
+X
+Y
+Z
+h
+∼
+∼
+∼
+i
+i
+h
+∼
+∼
+
+
+
+ϕ(X ⊃ Y ∧ Z ∨ ¬X)i
+(implikácios)
+ϕXh	ϕ(Y ∧ Z ∨ ¬X)i
+(diszjunkciós)
+
+Az igazhalmaz:
+
+
+
+
+ϕ(Y ∧ Z)i
+(konjukciós)
+ϕY i
+ϕZi
+
+ϕ¬Xi
+(negációs)
+
+
+ϕXh
+
+
+1.ág
+2.ág
+3.ág
+X
+Y
+Z
+X
+Y
+Z
+X
+Y
+Z
+h
+∼
+∼
+∼
+i
+i
+h
+∼
+∼
+
+
+
+
+ϕ(X ⊃ Y ∧ Z ∨ ¬X)h  (¬implikációs)
+ϕXi
+ϕ(Y ∧ Z ∨ ¬X)h  (¬diszjunkciós)
+ϕ(¬X)h ϕ(Y ∧ Z)h
+
+ϕXi
+ϕY h	ϕZh
+
+
+ϕ(X ⊃ Y ∧ Z ∨ ¬X)h  (¬implikációs)
+ϕXi
+ϕ(Y ∧ Z ∨ ¬X)h  (¬diszjunkciós)
+ϕ(¬X)h ϕ(Y ∧ Z)h
+
+ϕXi
+ϕY h	ϕZh
+
+1.ág
+2.ág
+X
+Y
+Z
+X
+Y
+Z
+i
+h
+∼
+i
+∼
+h
+
+
+
+ϕ(X ⊃ Y ∧ Z ∨ ¬X)h  (¬implikációs)
+ϕXi
+ϕ(Y ∧ Z ∨ ¬X)h  (¬diszjunkciós)
+ϕ(¬X)h ϕ(Y ∧ Z)h
+
+ϕXi
+ϕY h	ϕZh
+
+A hamishalmaz:
+X
+Y
+Z
+i
+i
+h
+i
+h
+i
+i
+h
+h
+
+
+1.ág
+2.ág
+X
+Y
+Z
+X
+Y
+Z
+i
+h
+∼
+i
+∼
+h
+
+
+
+
+Ítéletlogika - Szemantika (folytatás)
+
+
+Formulák és formulahalmazok szemantikus tulajdonságai
+
+
+Szemantikus következményfogalom
+
+
+Formalizálás az ítéletlogikában
+
+
+
+Kielégíthetőség/kielégíthetetlenség/tautológia formulákra
+(Tk.4.3.1.)
+Egy B formula kielégíthető, ha legalább egy interpretáció kielégíti.
+
+Egy B formula kielégíthetetlen, ha egyetlen interpretáció sem elégíti ki.
+
+Egy B formula tautológia (|=0 B), ha minden interpretáció kielégíti.  A tautologiát ítéletlogikai törvénynek is nevezik.
+
+
+
+
+
+
+
+
+
+
+Legyen F = {A1, A2, . . . , An} formulahalmaz.
+
+
+Kielégíthetőség/kielégíthetetlenség formulahalmazokra
+(Tk.4.3.12.)
+Egy F formulahalmaz kielégíthető, ha legalább egy interpretáció kielégíti.
+
+Egy F formulahalmaz kielégíthetetlen, ha bármely interpretációban legalább egy formulája h (nincs olyan interpretáció, ami kielégítené).
+
+
+
+
+Ítéletlogika - Szemantika (folytatás)
+
+
+Formulák és formulahalmazok szemantikus tulajdonságai
+
+
+Szemantikus következményfogalom
+
+
+Formalizálás az ítéletlogikában
+
+
+Szemantikus következmény (Tk.4.4.1.)
+Egy tt formula szemantikus vagy tautologikus következménye
+az F = {F1, F2, . . . , Fn} formulahalmaznak,
+ha minden olyan I interpretációra, amelyre I |=0 {F1, F2, . . . , Fn} fennáll, I |=0 tt is fennáll (ha I modellje {F1, F2, . . . , Fn}-nek, akkor modellje tt-nek is).
+Jelölés:  {F1, F2, . . . , Fn} |=0 tt
+
+
+Tehát (F, tt) akkor helyes következtetésforma, ha teljesül, hogy
+F |=0 tt és létezik olyan I interpretáció, melyre I |=0 F .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ennek alapján azegyik  szemantikus eldöntésprobléma: tetszőleges ítéletlogikai formuláról eldönteni, hogy kielégíthetetlen-e.
+
+
+
+
+
+
+
+
+Ennek alapján amásik  szemantikus eldöntésprobléma: tetszőleges ítéletlogikai formuláról eldönteni, hogy tautológia-e.
+
+
+
+
+
+
+
+
+
+
+
+
+Példák átalakítási szabályokra
+X ⊃ Y ∼0 ¬X ∨ Y
+¬¬X ∼0 X
+De Morgan szabályok:
+1  ¬(X ∧ Y ) ∼0 ¬X ∨ ¬Y
+2  ¬(X ∨ Y ) ∼0 ¬X ∧ ¬Y
+Egyszerűsítési szabályok:
+1  (X ∨ d) ∧ (¬X ∨ d) ∼0 d
+2  (X	k)	(  X	k)	0 k
+ahol d elemi diszjunkció és k elemi konjunkció.
+
+
+
+
+
+
+
+
+F = {Z ⊃ M ∨ P, Z, ¬P }
+
+P
+M
+Z
+Z ⊃ M ∨ P
+Z
+¬P
+lszk.
+köv.
+i
+i
+i
+i
+i
+h
+h
+h/i
+i
+i
+h
+i
+h
+h
+h
+h/i
+i
+h
+i
+i
+i
+h
+h
+h/i
+i
+h
+h
+i
+h
+h
+h
+h/i
+h
+i
+i
+i
+i
+i
+i
+i
+h
+i
+h
+i
+h
+i
+h
+h/i
+h
+h
+i
+h
+i
+i
+h
+h/i
+h
+h
+h
+i
+h
+i
+h
+h/i
+Csak egy igazságértékre kielégíthető a feltételhalmaz.
+
+
+
+Visszakövetkeztetés
+Az F feltételhalmaz és a B következményformula ismeretében eldöntjük, hogy B valóban következménye-e F-nek.  Mivel F |=0 B pontosan akkor, ha az F ∪ {¬B} formulahalmaz kielégíthetetlen.
+Más szóval B pontosan akkor következménye F-nek, ha minden olyan interpretációban, ahol B hamis, az F kielégíthetetlen.
+
+
+
+
+
+Ítéletlogika - Szemantika (folytatás)
+
+
+Formulák és formulahalmazok szemantikus tulajdonságai
+
+
+Szemantikus következményfogalom
+
+
+Formalizálás az ítéletlogikában
+
+
+
+
+
+
+Tegyük fel, hogy adott valamilyen köznapi vagy matematikai probléma.  Ennek természetes nyelvű egyszerű vagy összetett kijelentő mondatokkal való leírását ismerjük.
+Az egyszerű kijelentő mondatok formalizálására bevezetünk egy
+azonosítót (állításjel, ítéletváltozó).
+Az összetett mondatot analizáljuk, átalakítjuk azonos értelmű, de egyszerű kijelentő mondatokból olyan nyelvtani összekötőkkel felírt mondattá, ahol a nyelvtani összekötők egyben logikai
+összekötők (logikai műveletek).
+
+
+
+
+1Tk.54-55.o.
+
+
+
+
+
+Betörtek egy áruházba.  A nyomozási jegyzőkönyv a következőket tartalmazza:
+Ha férfi a tettes, akkor kistermetű.
+Ha kistermetű, akkor az ablakon mászott be.
+A tettes férfi vagy legalábbis férfiruhát hordott.
+Ha férfiruhát hordott és feltéve, hogy a szemtanú vallomása hiteles akkor az ablakon mászott be.
+A helyszíni szemle megállapította, hogy az ablakon senki sem mászott be.
+A nyomozók azt sejtik, hogy a tettes nem férfi.
+
+
+
+Betörtek egy áruházba.  A nyomozási jegyzőkönyv a következőket tartalmazza:
+Ha férfi a tettes( F ), akkor kistermetű( K).  F ⊃ K
+Ha kistermetű, akkor az ablakon mászott be( A).  K ⊃ A
+A tettes férfi vagy legalábbis férfiruhát hordott( R).  F ∨ R
+Ha férfiruhát hordott és feltéve, hogy a szemtanú vallomása hiteles (H), akkor az ablakon mászott be.  (R ∧ H) ⊃ A
+A helyszíni szemle megállapította, hogy az ablakon senki sem mászott be.  ¬A
+A nyomozók azt sejtik, hogy a tettes nem férfi.  ¬F
+A feltételhalmaz:  {F ⊃ K,  K ⊃ A,  F ∨ R,  (R ∧ H) ⊃ A,  ¬A}
+A feltételezés szerinti következmény:  ¬F
+
+
+
+Előrekövetkeztetés:
+Az {F ⊃ K, K ⊃ A, F ∨ R, (R ∧ H) ⊃ A, ¬A} formulahalmazt egyetlen interpretáció elégíti ki:
+A = h,  F = h,  K = h,  R = i,  H = h, azaz a legszűkebb következényt leíró formula:  ¬A ∧ ¬F ∧ ¬K ∧ R ∧ ¬H (¬A ∧ ¬F ∧ ¬K ∧ R ∧ ¬H) ⊃ ¬F tautológia, így ¬F következmény.
+
+Visszakövetkeztetés:
+¬F következmény, mivel a negáltját hozzávéve a feltételhalmazhoz, a kapott formulahalmaz:
+{F ⊃ K,  K ⊃ A,  F ∨ R,  (R ∧ H) ⊃ A,  ¬A,  F } kielégíthetetlen.
+
+
+Logika és számításelmélet
+I. rész Logika
+Harmadik előadás
+
+
+
+
+
+
+
+Elsőrendű logika – bevezetés
+
+
+
+Az elsőrendű logika szintaxisa
+
+
+
+Az ítéletlogikában nem foglalkoztunk az állítások minősítésével és az
+állítások leírásával.  Az állítás definíciója szerint az állítást egy kijelentő mondattal ki lehet fejezni.
+Ha a kijelentő mondat alanya valamely konkrét dolog, akkor az állítást nulladrendű állításnak hívjuk.  Az ilyen állítások formális leírására egy relációt (logikai függvényt) definiálunk.
+
+
+Az állítás konkrét egyedekkel behelyettesített reláció.  Pl.:  E(9) vagy L(9,6,3) állítások, de L(9,6,z) nem állítás (paraméteres állítás).
+
+
+
+
+Ha a kijelentő mondat alanya egy halmaz, akkor az állítást
+elsőrendű állításnak hívjuk.
+Ilyenkor az állítás az összes elemre egyidejűleg fennálló megállapítást/általánosítást vagy a halmaz bizonyos elemeire (nem feltétlenül mindre) fennálló megállapítást/létezést fogalmaz meg.
+Leírásukhoz a kvantorokat (∀,∃) használjuk.
+
+
+
+
+
+
+
+
+Az 1800-as évek végén és az 1900-as évek elején a matematikai struktúrák (halmazelmélet és az aritmetika – számelmélet) logikai vizsgálatához meg kellett teremteni mind a nulladrendű, mind az elsőrendű állítások leírására szolgáló eszközöket.  Szükségessé vált a matematikai struktúrákat leíró nyelv definiálása.
+
+
+
+Definíció
+A matematikai struktúra egy (U, R, M, K) halmaznégyes, ahol
+• U :  nem üres halmaz, a struktúra értelmezési tartománya (amennyiben U egyfajtájú elemekből áll)
+• R:  az U -n értelmezett n-változós (n = 1, 2, . . . , k) logikai függvények (alaprelációk) halmaza
+• M :  az U -n értelmezett n-változós (n = 1, 2, . . . , k) matematikai függvények (alapműveletek) halmaza
+• K:  az U megjelölt elemeinek egy (esetleg üres) részhalmaza
+
+
+
+
+
+
+Adott matematikai struktúra leíró nyelv ábécéjének logikán kívüli része áll:
+• az R halmazbeli alaprelációk neveiből
+• az M halmazbeli alapműveletek neveiből
+• a K halmazbeli elemek neveiből
+Ezekkel a nevekkel már lehet egyszerű (nulladrendű és paraméteres) állításokat leírni.  Az R, M, K-beli nevek a leíró nyelv logikán kívüli részét képezik.
+
+
+
+
+
+Az összetett állítások és az elsőrendű állítások leírására kibővítjük az ábécét a logikai szimbólumokkal (az ábécé logikai része):
+• individuumváltozók
+• unér és binér logikai műveleti jelek ¬, ∧, ∨, ⊃
+• kvantorok ∀, ∃
+• elválasztójelek ( ) ,
+Ez együtt egy adott matematikai struktúra logikai leíró nyelvének az ábécéje.
+
+
+
+
+
+
+(N0; =; s, +, ∗; 0) együttes, ahol
+• x, y, . . .:  individuumvátozók befutják a természetes számok halmazát (N0-t)
+•  =:  az {(x, x)} igazhalmazú alapreláció neve
+• s:  az egyváltozós rákövetkezés függvény neve
+•  + és ∗:  rendre az összeadás és a szorzás műveletek nevei
+• 0:  a megjelölt univerzumelem neve (az az elem, amely nem tartozik a rákövetkezés függvény értékkészletébe)
+
+
+
+
+1Tk.36-37.o.
+
+
+
+
+A struktúra szignatúrája alatt az alaprelációk és az alapműveletek aritásait, valamint a konstansok számát megadó ν1, ν2, ν3 egész értékű függvényeket értjük.
+Esetünkben:  ν1(=) = 2, ν2(s) = 1, ν2(+) = 2, ν2(∗) = 2, ν3 = 1
+Felsorolással megadva:
+
+Az elemi aritmetika leíró nyelvének ábécéjében az N0 kezelésére a
+változók (x, y, . . .) szolgálnak (individuumváltozók), az
+{=, s, +, ∗; 0} jelek a megfelelő leképezések azonosítói.  A leíró nyelv szignatúrája ugyanaz, mint a struktúráé.
+
+
+
+
+Az alaprelációkkal (itt az = relációval) lehet állításokat leírni, pl.
+2 = 3, 5 = 5.  De nem állítás pl.  y = 5 vagy z = w (paraméteres
+állítások).  Egyéb ismert egyszerű állításokat pl.  a kisebb egyenlő relációt ezen a nyelven csak összetett állítás formájában lehet felírni (formalizálni).  Ehhez a nyelv ábécéjét logikai résszel bővítjük ki. Ezek:
+• individuumváltozók:  x, y, . . .
+• logikai összekötőjelek:  ¬, ∧, ∨, ⊃
+• kvantorok: ∀, ∃
+• elválasztójelek:  ( ) ,
+
+
+
+Definiáljuk (formalizáljuk) az aritmetika logikai leíró nyelvén a ≤
+relációt:
+
+Megjegyzés:  Az aritmetika univerzuma egyfajtájú elemekből, a természetes számokból állt.  Egy matematikai struktúra univerzuma többfajtájú elemekből is állhat.  Például a térgeometriában pontok, egyenesek és síkok alkotják az értelmezési tartományt.  Ekkor a leíró nyelv ábécéjében a fajták elnevezésére is bevezetünk jeleket. Esetünkben ezek a nevek:  p, e, s. Így az értelmezési tartomány
+Up ∪ Ue ∪ Us lesz, a struktúra pedig az (Up ∪ Ue ∪ Us, R, M, K)
+együttes.
+
+
+
+
+
+
+
+
+
+Olyan ábécével kell hogy rendelkezzen, melynek a logikán kívüli szimbólumai és azok szignatúrája paraméterezéssel bármely adott matematikai struktúra szignatúrájával megfeleltethető kell legyen,
+és ennélfogva a szimbólumok lehessenek a struktúra relációinak, műveleteinek és megjelölt elemeinek a nevei.  Más szóval a nyelv alkalmas kell, hogy legyen tetszőleges szignatúrájú matematikai struktúrák leírására.
+
+
+
+
+Egyféle elemből álló U esetén az (U, R, M, K) struktúra leíró nyelv logikán kívüli része lehet a következő.
+Az L nyelv ábécéje:  (P r, F n, Cnst), szignatúrája:  (ν1, ν2, ν3).
+• P r:  predikátumszimbólumok halamaza
+ν1:  P ∈ P r-re megadja P aritását (k)
+• F n:  függvényszimbólumok halamaza
+ν2:  f ∈ F n-re megadja f aritását (k)
+• Cnst:  konstansszimbólumok halamaza
+ν3:  megadja a konstansok számát
+
+
+Többféle elemből álló U esetén az (U, R, M, K) struktúra leíró nyelv logikán kívüli része lehet a következő.
+Az L nyelv ábécéje:  (Srt, P r, F n, Cnst), szignatúrája:  (ν1, ν2, ν3).
+• Srt:  nemüres halmaz, melynek πj  elemei fajtákat szimbolizálnak
+• P r:  predikátumszimbólumok halamaza
+ν1:  P ∈ P r-re megadja P aritását (k), és hogy milyen fajtájuák az egyes argumentumok (π1, π2, . . . , πk)
+• F n:  függvényszimbólumok halamaza
+ν2:  f ∈ F n-re megadja f aritását (k), és hogy milyen fajtájuák az egyes argumentumok, valamint a függvény értéke (π1, π2, . . . , πk; πf )
+• Cnst:  konstansszimbólumok halamaza
+ν3:  megadja minden fajtához a konstansok számát.
+
+
+
+
+
+• különböző fajtájú individuumváltozók (minden fajtához megszámlálhatóan végtelen sok):  x, y, yk, . . .
+• unér és binér logikai műveleti jelek:  ¬, ∧, ∨, ⊃
+• kvantorok: ∀, ∃
+• elválasztójelek:  ( ) ,
+Az L nyelv ábécéjére V [Vν ]-vel hivatkozunk, ahol Vν  adja meg a
+(ν1, ν2, ν3) szignatúrájú (Srt, P r, F n, Cnst) halmaznégyest.
+
+
+
+
+
+
+
+Elsőrendű logika – bevezetés
+
+
+
+Az elsőrendű logika szintaxisa
+
+
+
+
+
+
+
+
+A nyelv kifejezései informálisan:
+• termek:  a matematikai leképezéseket szimbolizálják
+• formulák:  a logikai leképezéseket szimbolizálják
+
+
+
+
+
+
+
+Egyfajtájú eset.
+Termek – Lt(Vν)
+1 (alaplépés) Minden individuumváltozó és konstans szimbólum term.
+2 (rekurzív lépés) Ha az f ∈ F n k-változós függvényszimbólum
+és t1, t2, . . . , tk termek, akkor f (t1, t2, . . . , tk) is term.
+3 Minden term az 1, 2 szabályok véges sokszori alkalmazásával
+áll elő.
+
+
+
+
+
+2Tk.112.o.
+
+
+
+Egyfajtájú eset.
+Formulák – Lf (Vν)
+1 (alaplépés) Ha a P ∈ P r k-változós predikátumszimbólum és t1, t2, . . . , tk termek, akkor P (t1, t2, . . . , tk) formula (atomi formula).
+2 (rekurzív lépés)
+• Ha A formula, akkor ¬A is az.
+• Ha A és B formulák, akkor (A   B) is formula, ahol	a három binér művelet bármelyike.
+3 Ha A formula, akkor ∀xA és ∃xA is az.
+4 Minden formula az 1, 2, 3 szabályok véges sokszori alkalmazásával áll elő.
+
+
+
+
+
+Többfajtájú eset.
+Termek – Lt(Vν)
+1 (alaplépés) Minden π ∈ Srt fajtájú individuumváltozó és konstans szimbólum π fajtájú term.
+2 (rekurzív lépés) Ha az f ∈ F n (π1, π2, . . . , πk; πf ) fajtájú függvényszimbólum és t1, t2, . . . , tk rendre π1, π2, . . . , πk fajtájú termek, akkor f (t1, t2, . . . , tk) πf  fajtájú term.
+3 Minden term az 1, 2 szabályok véges sokszori alkalmazásával
+áll elő.
+
+
+Többfajtájú eset.
+Formulák – Lf (Vν)
+1 (alaplépés) Ha a P ∈ P r (π1, π2, . . . , πk) fajtájú predikátumszimbólum és t1, t2, . . . , tk rendre π1, π2, . . . , πk fajtájú termek, akkor P (t1, t2, . . . , tk) formula (atomi formula).
+2 (rekurzív lépés)
+• Ha A formula, akkor ¬A is az.
+• Ha A és B formulák, akkor (A   B) is formula, ahol	a három binér művelet bármelyike.
+3 Ha A formula, akkor ∀xA és ∃xA is az.
+4 Minden formula az 1, 2, 3 szabályok véges sokszori alkalmazásával áll elő.
+
+Elsőrendű logikai nyelv:  L(Vν ) = Lt(Vν ) ∪ Lf (Vν ).
+
+
+
+
+• ¬A negációs
+• A ∧ B konjukciós
+• A ∨ B diszjunkciós
+• A ⊃ B implikációs
+• ∀xA univerzálisan kvantált
+• ∃xA egzisztenciálisan kvantált
+A ∀xAés ∃xA formulák esetén az A formula a kvantált formula törzse - mátrixa.
+
+
+Vezessük be a ∀, ∃, ¬, ∧, ∨, ⊃ prioritási sorrendet, ekkor az
+ítéletlogikához hasonlóan definiáljuk:
+• a zárójelelhagyásokat
+• a műveletek és a kvantorok hatáskörét
+• a komponens és prímkomponens fogalmakat
+• egy formula fő műveleti jelét
+
+
+
+
+
+
+
+
+
+Egy formulában egy logikai művelet hatáskörében lévő részformulá(ka)t komponens formuláknak nevezzük.
+
+
+Megjegyzés:  prímkomponensnek nevezzük azokat a prímformulákat, amelyekből a formula kizárólag a ¬, ∧, ∨, ⊃ műveletek segítségével épül fel.
+
+
+
+
+
+
+
+Term szerkezeti fája.
+Egy t term szerkezeti fája egy olyan véges fa, melyre teljesül, hogy
+• a gyökeréhez a t term van rendelve,
+• ha valamelyik csúcsához egy tj term van rendelve, akkor az adott csúcs gyerekeihez a tj term közvetlen résztermjei vannak rendelve,
+• leveleihez individuumváltozók vagy konstansok vannak rendelve.
+
+
+
+
+
+
+3Tk. 116-118.o.
+
+
+
+
+
+
+Formula szerkezeti fája.
+Egy F formula szerkezeti egy olyan véges fa, melyre teljesül, hogy
+• a gyökeréhez az F formula van rendelve,
+• ha valamelyik csúcsához egy F j formula van rendelve, akkor az adott csúcs gyerekeihez az F j formula közvetlen részformulái vannak rendelve,
+• leveleihez atomi formulák vannak rendelve.
+
+
+
+
+
+
+Egy A formula logikai összetettsége:  A(A)
+
+
+
+
+
+
+
+
+Megjegyzés:  Ha egy formulában egy változó kötött, akkor
+átnevezve ezt a változót a formulában elő nem forduló változónévvel a formula ekvivalens marad az eredetivel.  Ily módon minden formula átírható változóátnevezésekkel vegyes változót már nem tartalmazó formulává.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. rendű állításokat szimbolizálnak az L nyelven a zárt formulák vagy mondatok.
+
+
+
+
+Alapkifejezés
+Alapkifejezés a változót nem tartalmazó L kifejezés (alapformula, alapterm).  Ezeket alappéldányoknak is nevezik.  Az atomi formulák alappéldányait két csoportba soroljuk:
+1 Egy atomi formula alapatom, ha argumentumai konstans szimbólumok vagy egy megadott univerzum elemei (pl.  P (c))
+2 Egy atomi formulát az atomi formula alappéldányának
+nevezzük, ha argumentumai alaptermek (pl.  Q(f (a, b), a))
+
+Megjegyzés:  Egy atomi formulát (nem alappéldány) egyébként paraméteres állításnak is neveznek.
+
+
+Logika és számításelmélet
+I. rész Logika
+Negyedik előadás
+
+
+
+
+
+
+
+Az elsőrendű logika szemantikája
+
+
+
+Formulák és formulahalmazok szemantikus tulajdonságai
+
+
+
+Egy elsőrendű logikai nyelv L[Vν] interpretációja egy, az L nyelvvel azonos szignatúrájú (U, R, M, K) matematikai struktúra.
+Másik megfogalmazás:  egy, a szignatúrának megfelelő U halmaz megadása, ezen a P r, F n, Cnst szimbólumhalmazok szignatúrájával megegyező R, M , K reláció-, művelet- és konstanshalmaz definiálása.
+
+Az	interpretáció működése:	=	Srt,  P r,  F n,  Cnst
+függvénynégyes, ahol:
+• Srt : π	π, ahol ha Srt egyelemű, akkor az interpretáció U
+univerzuma egyfajtájú elemekből áll
+• az IP r : P ›→ P I, ahol P I a struktúra R halmaza
+• az IF n : f ›→ f I, ahol f I a struktúra M halmaza
+• az ICnst : c ›→ cI, ahol cI a struktúra K halmaza
+
+
+
+
+
+
+
+
+|x|I,κ  az U univerzumbeli κ(x) elem.
+
+
+
+Legyen egy formula valamely L(P1, P2, . . . , Pn; f1, f2, . . . , fk) formalizált nyelven, ahol (r1, r2, . . . , rn; s1, s2, . . . , sk) az L nyelv, típusa/szignatúrája (ν1, ν2, ν3).
+
+1. lépésVálasztunk egy   S = U (R1, R2, . . . , Rn; o1, o2, . . . , ok) matematikai struktúrát, amelynek a típusa/szignatúrája
+(r1, r2, . . . , rn; s1, s2, . . . , sk)/(ν1, ν2, ν3) megegyezik a nyelvével és  a logikán kívüli szimbólumokat a megfelelő relációknak illetve műveleteknek feleltetjük meg:  Pi = PiI , fk = fkI  (ha az interpretáló struktúrának nincs leíró nyelve, vagy nem akarjuk azt használni.  Ha felhasználjuk az interpretáló struktúra leíró nyelvét, akkor PiI  = Ri neve és fkI  = ok  neve.  Ez a nyelv szimbólumainak interpretációja, ahol Ri és ok  jelentése egyértelmű).
+2. lépésA nem kötött individuumváltozók kiértékelése (   x I,κ) és a kifejezések helyettesítési értékeinek kiszámítása.
+
+
+
+
+
+
+
+
+
+
+
+Formulák szemantikája
+1    P (t1, t2, . . . , tn) I,κ = i, ha ( t1 I,κ, t2 I,κ, . . . , tn I,κ)	P I, ahol a P I jelöli a P I reláció igazhalmazát.
+2   |¬A|I,κ  = ¬|A|I,κ
+|A ∧ B|I,κ  = |A|I,κ  ∧ |B|I,κ
+|A ∨ B|I,κ  = |A|I,κ  ∨ |B|I,κ
+|A ⊃ B|I,κ  = |A|I,κ  ⊃ |B|I,κ
+3 |∀xA|I,κ  = i, ha|A|I,κ∗  = i κ minden κ∗ x variánsára
+|∃xA|I,κ  = i, ha|A|I,κ∗  = i κ legalább egy κ∗ x variánsára
+A továbbiakban egyfajtájú struktúrákkal és egyfajtájú	nyelvvel (Srt egyelemű halmaz) foglalkozunk az elsőrendű logika tárgyalása során.
+
+
+
+
+
+∀xP (x, y) formula kifejtése
+U = {a, b, c}, formulakifejtés κ(y) = a, b, c-re:
+  • κ(y) = a
+|∀xP (x, y)|I,κ  = |∀xP (x, a)|I  = P I(a, a) ∧ P I(b, a) ∧ P I(c, a)
+  • κ(y) = b
+|∀xP (x, y)|I,κ  = |∀xP (x, b)|I  = P I(a, b) ∧ P I(b, b) ∧ P I(c, b)
+  • κ(y) = c
+|∀xP (x, y)|I,κ  = |∀xP (x, c)|I  = P I(a, c) ∧ P I(b, c) ∧ P I(c, c)
+
+
+
+
+∀x∃y(P (x, y) ⊃ R(x, y)) formula kifejtése
+U = {a, b, c}
+|∀x∃y(P (x, y) ⊃ R(x, y))|I
+=
+|∃y(P (a, y) ⊃ R(a, y))|I  ∧
+|∃y(P (b, y) ⊃ R(b, y))|I  ∧
+|∃y(P (c, y) ⊃ R(c, y))|I
+=
+.(P I(c, a) ⊃ RI(c, a)) ∨ (P I(c, b) ⊃ RI(c, b)) ∨ (P I(c, c) ⊃ RI(c, c))Σ ∧
+
+
+
+
+  • L nyelv:
+= (=, P1, P2; a, b, f1, f2)
+szignatúra:  (2, 2, 2; 0, 0, 2, 2)
+  • A struktúra leíró nyelve:
+S = N(=, <, >; 0, 1, +, )
+szigantúra:  (2, 2, 2; 0, 0, 2, 2)
+
+IP r : P → P I
+=
+P1
+P2
+
+=
+<
+>
+
+IF n : f → f I
+a
+b
+f1
+f2
+
+0
+1
++
+∗
+ICnst:  nincs konstans, csak két db 0 változós függvény
+
+
+
+
+Az t = f1(x, f2(x, y)) term jelentésének megállapítása:
+|t|I,κ  = |f1(x, f2(x, y))|I,κ  =
+|f1|I (|x|I,κ, |f2(x, y)|I,κ) =
++(x, ∗(x, y)) =
+x + x ∗ y
+
+
+x
+y
+x + x ∗ y
+κ1
+1
+1
+2
+κ2
+2
+3
+8
+κ3
+0
+4
+0
+. . .
+. . .
+. . .
+. . .
+
+
+
+A P1(t, f1(y, f2(x, y))) formula jelentésének megállapítása:
+|P1(t, f1(y, f2(x, y)))|I,κ  =
+|P1|I (|t|I,κ, |f1|I (|y|I,κ, |f2|I (|x|I,κ, |y|I,κ))) =
+< (+(x, ∗(x, y)), +(y, ∗(x, y))) =
+< (x + x ∗ y, y + x ∗ y) = (x + x ∗ y) < (y + x ∗ y)
+Egy kvantormentes formula kiértékelése:  a formula minden alap előfordulását generáljuk és így minden állítás előáll I-ben.
+
+x
+y
+(x + x ∗ y) < (y + x ∗ y)
+1
+1
+(1 + 1 ∗ 1) < (1 + 1 ∗ 1) = h
+2
+3
+(2 + 2 ∗ 3) < (3 + 2 ∗ 3) = i
+. . .
+. . .
+. . .
+
+
+
+
+Egzisztenciális formula jelentésének megállapítása:
+  xP1(a, f1(x, x)) I,κ = i, ha  P1(a, f1(x, x)) I,κ∗  = i κ legalább egy κ∗ variánsára.
+Azaz ebben az interpretációban, ha 0 < (x + x) = i
+legalább egy u ∈ N esetén.
+Nézzük meg a formula értéktábláját:
+
+x
+0 < (x + x)
+0
+h
+1
+i
+. . .
+. . .
+Mivel az x = 1-re a formula törzse i, ezért a ∃x(0 < (x + x)) formula is i.
+
+
+
+
+Univerzális formula jelentésének megállapítása:
+  xP1(a, f1(b, x))) I,κ = i, ha  P1(a, f1(b, x))) I,κ∗  = i κ minden κ∗ x variánsára.
+Nézzük meg a formula értéktábláját:
+
+x
+0 < (1 + x)
+0
+i
+1
+i
+. . .
+. . .
+Mivel minden egészre a formula törzse i, ezért a   x(0 < (1 + x)) formula
+értéke i.
+
+
+Egy 1.  rendű formula prímformulái az atomi formulák (ezek paraméteres
+állítások az interpretációkban) és a kvantált formulák (ezek állítások, ha zártak).
+Egy 1.  rendű formula prímkomponensei a formula azon prímformulái, amelyekből a formula logikai összekötőjelek segítségével épül fel.
+Az igazságtáblában (ítéletlogika) az első sorba az állításváltozók (ezek a formula prímkomponensei) és a formula kerülnek.  A változók alá igazságértékeiket (interpretáció) írjuk.  A formula alatt a megfelelő helyettesítési értékek találhatók.
+Egy 1.  rendű formula értéktáblájában az első sorba a formula szabad változói, a prímkomponensek és a formula kerülnek.  (Mivel a prímformulák több esetben paraméteres állítások, ezért az interpretációban az individuumváltozók kiértékelése után válnak
+állításokká.)  Az individuumváltozók alá a lehetséges változókiértékelések, a prímformulák alá a megfelelő helyettesítési értékek kerülnek.  A formula alatt a formulának a prímformulák értékei alapján kiszámított helyettesítési értékei találhatók.
+
+
+
+
+
+
+
+   • Legyen az interpretáló struktúra:
+U = {1, 2, 3}, |P |I  = {1, 3},
+|Q|I  = {(1, 2), (1, 3), (2, 1), (2, 2), (2, 3)}
+
+  A  formula értéktáblája  –  példa	
+A formula: F = ∃xP (x) ⊃ ∃yQ(w, y) ∨ P (v) ⊃ ∀zQ(w, z)
+  • A prímkomponensek: ∃xP (x), ∃yQ(w, y), P (v), ∀zQ(w, z)
+  • A szabad individuumváltozók:  v,w
+   • Legyen az interpretáló struktúra:
+U = {1, 2, 3}, |P |I  = {1, 3},
+|Q|I  = {(1, 2), (1, 3), (2, 1), (2, 2), (2, 3)}
+  • Ekkor |∃xP (x))|I  = i, a többiek paraméteres állítások.
+
+
+A formula: F = ∃xP (x) ⊃ ∃yQ(w, y) ∨ P (v) ⊃ ∀zQ(w, z)
+  • A prímkomponensek: ∃xP (x), ∃yQ(w, y), P (v), ∀zQ(w, z)
+  • A szabad individuumváltozók:  v,w
+   • Legyen az interpretáló struktúra:
+U = {1, 2, 3}, |P |I  = {1, 3},
+|Q|I  = {(1, 2), (1, 3), (2, 1), (2, 2), (2, 3)}
+  • Ekkor |∃xP (x))|I  = i, a többiek paraméteres állítások. Az értéktábla:
+
+
+
+
+
+
+
+Az elsőrendű logika szemantikája
+
+
+
+
+Formulák és formulahalmazok szemantikus tulajdonságai
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Kielégíthetetlenség
+Azt mondjuk, hogy tt formula illetve	formulahalmaz kielégíthetetlen (nem kielégíthető), ha	-hez nincs olyan	interpretáció, hogy	= tt illetve, hogy	=	.  Más szóval egy tt formula kielégíthetetlen, ha minden interpretációban a tt értéktáblájának minden sorában tt helyettesítési értéke h(amis).  Az	formulahalmaz kielégíthetetlen, ha az
+  közös értéktáblájában minden sorban van legalább egy eleme	-nek, amelynek a helyettesítési értéke h(amis).
+
+A két szemantikus tulajdonság fennállásának vizsgálatához az összes inerpretáló struktúrára szükség van.
+
+
+
+
+
+
+
+Legyenek rendre az L nyelv szignatúrája szerint
+(r1, r2, . . . , rn; s1, s2, . . . , sk) a predikátumszimbólumok és függvényszimbólumok aritásai.  Legyen U az univerzum, ahol |U | = M .
+Állapítsuk meg hány különböző (r1, r2, . . . , rn; s1, s2, . . . , sk)
+szignatúrájú struktúra létezik U felett?
+
+
+Ezekkel az aritásokkal relációkat
+
+
+n
+
+j=1
+
+2M rj
+
+
+, míg műveleteket
+
+
+k
+
+t=1
+
+M M st
+
+féleképp lehet definiálni.  Az összes definiálható struktúra száma a kettő
+
+szorzata: (
+ 
+n j=1
+
+2Mrj ) ∗
+ 
+k t=1
+
+M Mst .
+
+
+
+
+
+
+Alsó becslés esetén csak a lehetséges relációk számát állapítjuk meg.  Egy
+n változós reláció esetén az értelmezési tartomány elemszáma
+ U n  = M n, a relációt megadhatjuk az U n  halmaz egy részhalmazának kijelölésével.  A lehetséges n-változós relációk száma megegyezik az
+értelmezési tartomány hatványhalmaza (összes részalmazai halmaza) számosságával	(U n) -el, ez ha U megszámlálhatóan végtelen, akkor kontínuum számosságú (több mint megszámlálhatóan végtelen), ami algoritmikusan nem kezelhető.
+
+
+
+
+
+Legyenek rendre az	nyelv szignatúrája szerint (r1, r2, . . . , rn) a predikátumszimbólumok aritásai.
+Előállítjuk minden j = 1, . . . , n értékre az U rj   értékeinek felhazsnálásával Prj   összes alapatomját, tekintsük ezek egy rögzitett sorrendjét (bázis), a szemantikus fa szintjeihez ebben a sorrendben rendeljük hozzá az alapatomokat.  Egy-egy szint minden csúcsából pontosan két él indul ki, az egyik a szinthez rendelt alapatommal (ez jelenti, hogy az alapatom igaz az élhez tartozó interpretációkban), a másik ennek negáltjával van címkézve (ez jelenti, hogy az alapatom hamis az élhez tartozó interpretációkban).  A bináris fa ágai adják meg a lehetséges interpretációkat.
+
+
+
+
+
+Adott nyelv esetén a predikátumszimbólumokra az összes interpretáció megadása szemantikus fával.
+Legyen
+
+  • a formulahalmaz:
+K = {∀xP (x), ∀y∀z(¬Q(y, z) ∨ ¬P (z)), ∀u∀vQ(u, v)}
+  • U = {a, b, c}
+• a B bázis:  P (a), Q(a, a), P (b), Q(a, b), . . ., Q(c, c) alapatom sorozat
+
+
+
+
+
+
+A szemantikus fa a B bázis alapján:
+
+
+
+Logika és számításelmélet
+I. rész Logika
+Ötödik előadás
+
+
+
+
+
+
+Következményfogalom az elsőrendű logikában
+
+
+Formulák logikailag ekvivalens átalakításai
+
+
+Rezolúciós elv- rezolúciós kalkulus
+
+
+Logikai vagy szemantikus következmény
+Azt mondjuk, hogy a tt formula logikai (szemantikus) következménye az F formulahalmaznak, ha minden olyan I interpretációra, amelyre I |= F teljesül, az I |= tt is fennáll.
+Más szóval F |= tt teljesül, ha minden interpretáló struktúrában, az F, tt közös értéktáblájában minden olyan sorban, ahol az F elemeinek helyettesítési értéke igaz, a tt helyettesítési értéke is igaz.
+
+Jelölés:  F |= tt vagy {F1, F2, . . . , Fn} |= tt.
+
+
+
+
+Az ítéletlogikában bebizonyított tételek itt is igazak.
+
+
+Egyik eldöntésprobléma:  tetszőleges 1.rendű formulahalmazról eldönteni, hogy kielégíthetetlen-e.
+
+
+
+
+A következményfogalom alapján, annak eldöntése, hogy F |= tt
+elméletileg  megoldható az interpretáló struktúrákban az
+F1, F2, . . . , Fn és tt-re kapott közös értéktábla alapján.
+
+
+
+
+
+
+
+Tétel
+tt elsőrendű formula.  Ha |=0 tt, akkor |= tt. (Ha tt tautológia, akkor tt logikailag igaz.)
+Biz.: Ha |=0 tt, akkor tt igaz a prímkomponenseinek minden igazságkiértékelésére.  Tekintsük a tt egy I interpretációját, az individuumváltozók egy κ kiértékelése mellett.  Ekkor a prímkomponensek igazságértéke kiszámolható és bármi is lesz a konkrét értékük, ezután a tt helyettesítési értéke i lesz (mivel a prímkomponenseinek minden igazságkiértékelésére igaz).
+
+
+
+
+Tétel
+Ha F |=0 tt, akkor F |= tt.
+Biz.:  Az F prímkomponenseinek minden, az F-et kielégítő I interpretációjára (I |=0 F) I kielégíti tt-t is.  Ha az I interpretáció kielégíti F-et, akkor kielégíti tt-t is mivel az egyidejűleg a prímkomponensekre vonatkozó igazságkiértékelés is.
+
+
+
+
+
+
+
+
+A másik eldöntésprobléma a predikátumlogikában:  tetszőleges
+1. rendű formuláról el kell tudni dönteni, hogy logikailag igaz-e.
+
+
+
+
+
+Egy n változós ítéletlogikai B formula tautológia, ha
+• hamishalmaza üres.  Ez azt jelenti, hogy ¬B kielégíthetetlen.
+• az ítéletváltozók minden kiértékelésére (minden interpretációban) a helyettesítési érték i.
+Elsőrendű n változós B formula logikailag igaz, ha
+• minden U univerzumon, a változók minden behelyettesítése mellett kapott Bj alapformulák igazak minden, a nyelvnek megfelelő struktúrában.
+• ¬B kielégíthetetlen.  Egyetlen interpretációban, egyetlen változókiértékelés mellett sem igaz.
+Ezek a problémák szemantikailag világosak, de megoldásuk a teljes kipróbálást tételezi fel.  Szintaktikai eszközökre van szükség a megoldáshoz.
+
+
+
+
+
+Gödel bebizonyította, hogy
+
+
+ A szemantikus eldöntésprobléma ”
+
+algoritmikusan nem oldható meg – nem létezik univerzális
+eldöntési algoritmus”.
+
+Kutatások
+
+eldönthető formulaosztályok” keresésére.  Logikailag
+”
+
+ekvivalens formulaátalakítások alkalmazása mellett.
+Az egyik lehetőség, eldönthető formulaosztályokhoz tartozó formulákkal leírt szemantikus eldöntésproblémára kalkulus (döntési eljárás) keresése (tabló, rezolúciós elv).
+A másik lehetőség, a logika szintaktikai alapon való felépítése, szintaktikus eldöntésprobléma megadása és arra kalkulus kidolgozása.  (Erre nem térünk ki az előadás keretein belül.)
+
+
+
+
+
+
+Következményfogalom az elsőrendű logikában
+
+
+Formulák logikailag ekvivalens átalakításai
+
+
+Rezolúciós elv- rezolúciós kalkulus
+
+
+
+
+
+
+
+
+
+Az ítéletlogika eldönthető formulaosztályai a konjunktív normálforma és a diszjunktív normálforma.
+
+
+
+
+
+
+
+
+
+
+
+
+
+KDNF felírása a formula igazságtáblája alapján:
+• a formula igazhalmazbeli interpretációihoz felírjuk az interpretációban igaz teljes elemi konjunkciót,
+• felírjuk a kapott teljes elemi konjunkciókból álló diszjunkciós láncformulát.
+  • Egyszerűsítéssel előállíthatunk egy DNF-et. KKNF felírása a formula igazságtáblája alapján:
+• a formula hamishalmazbeli interpretációihoz felírjuk az
+interpretációban hamis teljes elemi diszjunkciót,
+• felírjuk a kapott teljes elemi diszjunkciókból álló konjunkciós láncformulát.
+• Egyszerűsítéssel előállíthatunk egy KNF-et
+
+A (¬(Z ⊃ ¬X) ∨ Y  formula igazságtáblája:
+
+X
+Y
+Z
+
+i
+i
+i
+i (X ∧ Y ∧ Z)
+i
+i
+h
+i (X ∧ Y ∧ ¬Z)
+i
+h
+i
+i (X ∧ ¬Y ∧ Z)
+i
+h
+h
+h (¬X ∨ Y ∨ Z)
+h
+i
+i
+i (¬X ∧ Y ∧ Z)
+h
+i
+h
+i (¬X ∧ Y ∧ ¬Z)
+h
+h
+i
+h (X ∨ Y ∨ ¬Z)
+h
+h
+h
+h (X ∨ Y ∨ Z)
+
+KKNF: (¬X ∨ Y ∨ Z) ∧ (X ∨ Y ∨ ¬Z) ∧ (X ∨ Y ∨ Z)
+KNF (egyszerűsítés után):  (Y ∨ Z) ∧ (X ∨ Y )
+KDNF:
+(X ∧Y ∧Z)∨(X ∧Y ∧¬Z)∨(X ∧¬Y ∧Z)∨(¬X ∧Y ∧Z)∨(¬X ∧Y ∧¬Z) 16/36
+
+
+
+
+
+
+
+Az előzőek alapján tetszőleges ítéletlogikai formula átírható KNF vagy DNF alakba.  Gödel szerint az eldöntésprobléma nem algoritmizálható, de ha egy eldönthető formulaosztályhoz tartozó formulává írjuk át az eldöntésproblémában vizsgált formulát, akkor bár nem algoritmussal hanem egy speciális levezetési eljárással (kalkulussal) sikeres döntésre juthatunk.
+
+
+
+
+
+
+Döntési
+
+algoritmus”, levezető eljárás egy olyan
+”
+
+algoritmus/lépéssorozat, amely adott input adatokkal dolgozik,
+azokat a megfelelő szabályok szerint használja fel, a levezetési szabály szerint alakítja át, és akkor áll meg, amikor a kitűzött célt (az eljárás megállási feltétele) elérte.  A megállással egy kétesélyes döntés egyik kimenetét igazolja.  Azonban, ha az algoritmus nem
+éri el a kitűzött célt, az nem feltétlenül jelenti azt, hogy meghozta a másik eshetőségre a döntést.  Egy ilyen eljárást kalkulusnak hívunk.
+
+
+
+
+
+Az egyik eldöntésprobléma megoldására - egy formula kielégíthetetlenségének eldöntésére több döntési algoritmus ismert.  Ezekről bebizonyítható, hogy ha a formula felhasználásával az algoritmus eléri a megállási feltételt, akkor a formula kielégíthetetlen (vagyis, ha a formula az F1 ∧ F2 ∧ · · · ∧ Fn ∧ ¬tt, akkor bebizonyítottuk, hogy {F1, F2, . . . , Fn} |=0 tt.)
+Azt is mondjuk, hogy az ilyen kalkulusok automatikus tételbizonyító kalkulusok.
+
+
+
+
+
+
+Következményfogalom az elsőrendű logikában
+
+
+Formulák logikailag ekvivalens átalakításai
+
+
+Rezolúciós elv- rezolúciós kalkulus
+
+
+
+Egy KNF alakú formula kielégíthetetlenségének vizsgálata a KNF-ben szereplő klózok S halmaza kielégíthetetlenségének vizsgálatával ekvivalens.  Hogyan lehet eldönteni, hogy egy S klózhalmaz kielégíthetetlen?  Meg kell mutatni, hogy az S
+ítéletváltozóinak tetszőleges interpretációjában legalább egy C ∈ S hamis.  Egy C klóz hamis egy interpretációban, ha minden literálja hamis.
+Ha az összes interpretációt az S összes ítéletváltozóinak rögzített sorrendje/bázis alapján előálló szemantikus fával adjuk meg, akkor egy C ítéletlogikai klóz abban az interpretációban hamis, amelyikben a klóz mindegyik literáljai ellenkező negáltságú.  Az
+X ∨ Z klóz hamis az ¬XY ¬Z és az ¬X¬Y ¬Z interpretációkban, az interpretáció kiválasztását a klóz szemantikus fára illesztésének hívjuk.
+
+
+
+Fogalmak
+Egy klóz illesztése a szemantikus fára az olyan ágak kiválasztása, amelyeken a klóz minden literálja negálva szerepel.  Ezekben az interpretációkban ez a klóz hamis.
+Cáfoló csúcsnak nevezzük a szemantikus fa azon csúcsát, amelyiket elérve egy klóz (amely azt megelőzően még nem volt hamis) hamissá válik.
+Levezető csúcsnak nevezzük a szemantikus fa azon csúcsát, amelyiket követő mindkét csúcs cáfoló csúcs.
+A szemantikus fa egy ága zárt, ha cáfoló csúcsban végződik.
+A szemantikus fa zárt, ha minden ága zárt.
+
+
+S =	Y ∨ ¬Z, X ∨ Z, ¬X ∨ ¬Y, ¬X ∨ Z, ¬Z	kielégíthetlen klózhalmaz.
+Jelölések:  cáfoló csúcs (•), levezető csúcs (◦)
+Zárt szemantikus fa:
+
+Y ∨ ¬Z  ¬X ∨ Z	¬Z	X ∨ Z Y ∨ ¬Z X ∨ Z
+
+
+
+
+
+A klózhalmaz kielégíthetetlenségének eldöntésére nem a szemantikus fát használjuk, de fontos háttéreszköz marad a rezolúciós kalkulus tulajdonságainak vizsgálatában.
+Elnevezések:
+• n-változós klóz	n-argumentumos klóz
+• 1-változós klóz	egységklóz
+• 0-változós klóz	üres klóz:  Q
+
+
+
+Egyszerűsítési szabály:  ha X ítéletváltozó és C egy X-et nem tartalmazó klóz, akkor (X ∨ C) ∧ (¬X ∨ C) ∼0 C
+Az (X) ∧ (¬X) ∼0 Q – azonosan hamis.
+
+
+
+
+
+
+
+
+Rezolúciós levezetés (Tk.229.o.)
+Egy S klózhalmazból való rezolúciós levezetés egy olyan véges
+k1, k2, . . . , km (m ≥ 1) klózsorozat, ahol minden j = 1, 2, . . . , m-re
+1 vagy kj ∈ S,
+2 vagy van olyan 1 ≤ s, t < j, hogy kj  a (ks, kt) klózpár rezolvense.
+A levezetés célja az üres klóz levezetése (ez a megállási feltétel).
+
+
+
+
+S klózhalmazból való rezolúciós levezetés döntési eljárás. Eldöntésproblémája:  levezethető-e egy S klózhalmazból az üres klóz?
+Rezolúciós cáfolatnak nevezzük azt a tényt, hogy S-ből levezethető az üres klóz.
+
+
+A rezolúciós kalkulus helyes (Tk.230.o.)
+(6.3.12) Lemma:  Legyen S tetszőleges klózhalmaz és k1, k2 . . . , kn
+klózsorozat rezolúciós levezetés S-ből.  Ekkor minden
+kj, j = 1, 2 . . . , n-re szemantikus következménye S-nek.
+(6.3.13) Tétel:  Legyen S tetszőleges klózhalmaz.  Ha S-ből levezethető az üres klóz, akkor S kielégíthetetlen.
+Bizonyítások indukcióval, illetve indirekt bizonyítással.
+
+
+
+
+1 j := 0, Sj := S, LIST := ∅.
+2 Állítsuk elő Sj  szemantikus fáját.  nj := a szemantikus fa szintjeinek száma.  Ha nj = 0, akkor levezettük az üres klózt, a levezetés LIST -ből kiolvasható.
+3 Egyébként válasszuk ki a fa egy levezető csúcsát.  A levezető
+csúcsot tartalmazó két ágra illesztett klózok legyenek kjj  és
+kjjj, rezolvensük pedig kj.  Tegyük a LIST  végére a kjj , kjjj, kj
+klózokat.
+4 Sj+1 := Sj ∪ {kj}, j := j + 1.  Folytassuk a 2. lépéssel.
+
+
+
+
+Példa - adott rezolúciós levezetés levezetési fája
+X ∨ Z	¬X ∨ Z	X ∨ ¬Z	¬X ∨ ¬Z
+
+
+Z	¬Z
+
+Q
+
+
+
+S1 = {X ∨ ¬Z, ¬X ∨ Z, X ∨ Z, ¬X ∨ ¬Z}
+
+1.	X ∨ Z	[ ∈ S1 ]
+2.	¬X ∨ Z	[ ∈ S1 ]
+3. Z	[ 1, 2 rezolvense ]
+4.	X ∨ ¬Z	[ ∈ S1 ]
+5.	¬X ∨ ¬Z	[ ∈ S1 ]
+6. ¬Z	[ 4, 5 rezolvense ]
+7. Q	[ 3, 6 rezolvense ]
+
+
+
+
+
+centrális klózok	mellékklózok
+
+k1	A1
+ 
+k2	A2
+ 
+k3
+
+
+
+ki−1	Ai−1
+ki
+
+
+
+k1 A1
+k2 A2
+k3
+
+
+
+km−1
+Am−1
+km
+
+
+
+lineáris rezolúció
+
+
+
+
+
+
+
+Reuzolúciós stratégiák:  lineáris rezolúció (helyes és teljes), lineáris input-, egység rezolúció (helyes de nem teljes) - Tk.236-238.o.
+Az előadásban nem szereplő további rezolúciós stratégiák:  Tk.281-300.o.
+
+
+
+
+
+
+
+
+
+
+
+S = {B ∨ ¬C, A ∨ ¬C, ¬A ∨ ¬B, ¬A ∨ C, C}
+1.	B ∨ ¬C	∈ S	1.	B ∨ ¬C	∈ S
+2.	¬A ∨ ¬B	∈ S	2.	C	∈ S
+3.	¬A ∨ ¬Crez	(1, 2)	3.	B	rez(1, 2)
+4.	A ∨ ¬C	∈ S	4.	¬A ∨ ¬B	∈ S
+5.	¬Crez	(3, 4)	5.	¬A	rez(3, 4)
+6.	C	∈ S	6.	A ∨ ¬C	∈ S
+7.	Q	rez(5, 6)	7.	¬C	rez(5, 6)
+8.	Q	rez(2, 7)
+lineáris input rez.	egységrezolúció
+
+
+
+
+
+
+
+
+
+
+Teljes levezetési fa adott klózzal kezdődő összes lineáris levezetés megadására.
+Legyen S = {X ∨ Z, ¬X ∨ Z, ¬Y ∨ ¬Z, ¬X ∨ Y, ¬Z}.
+X ∨ Z
+Y ∨ Z	Z	X ∨ ¬Y	X
+
+¬Z	¬Y ∨ ¬Z	¬Z	¬X ∨ Z	¬X ∨ Z	¬X ∨ Y
+
+Y	¬Y	Q	¬Y ∨ Z	Z	Y
+
+¬X ∨ Y	¬Z	¬Z
+
+¬X	¬Y	Q
+
+
+Logika és számításelmélet
+I. rész Logika
+Hatodik előadás
+
+
+
+
+
+
+
+
+
+Elsőrendű rezolúciós kalkulus - előkészítő fogalmak
+
+
+
+
+Eldönthető formulaosztályok keresése elsőrendű logikában.
+
+
+
+
+
+
+
+
+
+
+Az ítéletlogikai klózhalmaz (KNF) elsőrendű megfelelője az elsőrendű klózhalmaz (elsőrendű klózok konjunkciója) lehetne.
+
+
+
+
+
+
+
+A feladat tetszőleges elsőrendű formula átírása elsőrendű klózok konjunkciós formulájává.  Az eldöntésprobléma elsőrendű klózhalmaz kielégíthetetlenségének eldöntése.
+Ha egy univerzális formulát kifejtünk egy U univerzum felett, akkor a mag alappéldányainak konjunkciója lesz U -ekvivalens az eredeti formulával.
+
+
+
+
+
+
+Ha elsőrendű klózok halmazával tesszük ugyanezt, akkor alapklózok hamazát kapjuk.  A kifejtett klózhalmaz kielégíthetetlensége a kapott U feletti alapklózok halmazának kielégíthetetlenségével ekvivalens.
+Az alapklózokra a rezolúciós kalkulust ugyanúgy definiálhatjuk mint az ítéletlogikában – alaprezolúció (Tk.251-254.o.).  Alaprezolúcióval bármely adott U univerzumon való kielégíthetetlenség eldönthető.
+
+
+Elsőrendű klózhalmaz:
+S = {∀x∀y(P (x) ∨ ¬Q(x, f (y)), ∀u¬P (u), ∀z∀wQ(z, f (w))}
+U = {a, b, c} univerzum feletti kifejtett klózhalmaz:
+P (a) ∨ ¬Q(a, f (a)), P (a) ∨ ¬Q(a, f (b)), P (a) ∨ ¬Q(a, f (c)),
+P (b) ∨ ¬Q(b, f (a)), P (b) ∨ ¬Q(b, f (b)), P (b) ∨ ¬Q(b, f (c)),
+P (c) ∨ ¬Q(c, f (a)), P (c) ∨ ¬Q(c, f (b)), P (c) ∨ ¬Q(c, f (c)),
+¬P (a), ¬P (b), ¬P (c), Q(a, f (a)), Q(a, f (b)), Q(a, f (c)),	Σ
+Q(b, f (a)), Q(b, f (b)), Q(b, f (c)), Q(c, f (a)), Q(c, f (b)), Q(c, f (c))
+Alaprezolúciós levezetés:
+
+1  P (a) ∨ ¬Q(a, f (a))	∈ S
+2   Q(a, f (a))	∈ S
+3   P (a)	res(1,2)
+4  ¬P (a)	∈ S
+5   Q	res(3,4)
+
+
+
+
+
+
+
+
+
+Hogyan lehet előállítani a vizsgálandó formulát elsőrendű klózok konjunkciójaként?
+1 Tetszőleges formula átírható prenex alakba.
+2 Tetszőleges prenex formula átírható Skolem alakba.
+3 Tetszőleges Skolem normálforma felírható elsőrendű klózok konjunkciójaként.
+
+
+
+Az átalakításhoz szükséges átalakítási szabályok.
+
+Általános De Morgan szabályok
+¬∀xA ∼ ∃x¬A
+ 	¬∃xA ∼ ∀x¬A	
+Kvantorkiemelési szabályok
+(1)	∀xA[x] ∧ B ∼ ∀x(A[x] ∧ B)
+∀xA[x] ∨ B ∼ ∀x(A[x] ∨ B)
+(2)	∃xA[x] ∧ B ∼ ∃x(A[x] ∧ B)
+∃xA[x] ∨ B ∼ ∃x(A[x] ∨ B)
+
+
+
+
+
+
+Kvantorkiemelési szabályok
+(3)	∀xA[x] ∧ ∀xB[x] ∼ ∀x(A[x] ∧ B[x]) , de ∨-re nem
+(4)	∃xA[x] ∨ ∃xB[x] ∼ ∃x(A[x] ∨ B[x]) , de ∧-re nem
+(5)	Q1xA[x] ∧ Q2xB[x] ∼ Q1xQ2z(A[x] ∧ B[x/z])
+(6)	Q1xA[x] ∨ Q2xB[x] ∼ Q1xQ2z(A[x] ∨ B[x/z])
+
+
+
+
+
+
+1 A logikai összekötőjelek átírása ¬, ∧, ∨-ra.
+2 A De Morgan szabályok alkalmazása addig amíg a ¬
+hatásköre atomi formula nem lesz.
+3 A kvantorkiemelési szabályok alkalmazása addig amíg minden kvantor a formula elejére nem kerül (a formula törzse kvantormentes formula).
+
+
+
+
+∀x(∀yP (x, y) ∧ ∃y¬(Q(y) ⊃ P (x, a))) ⊃ ¬∀x∃y(P (y, x) ⊃ R(x, y))
+
+• 1.  lépés
+¬(∀x(∀yP (x, y)∧∃y¬(¬Q(y)∨P (x, a)))∨¬∀x∃y(¬P (y, x)∨R(x, y))
+• 2.  lépés
+∃x¬(∀yP (x, y)∧∃y¬(¬Q(y)∨P (x, a)))∨∃x¬∃y(¬P (y, x)∨R(x, y))
+∃x(¬∀yP (x, y)∨¬∃y¬(¬Q(y)∨P (x, a)))∨∃x∀y¬(¬P (y, x)∨R(x, y))
+∃x(∃y¬P (x, y)∨∀y¬¬(¬Q(y)∨P (x, a)))∨∃x∀y(P (y, x)∧¬R(x, y))
+∃x(∃y¬P (x, y) ∨ ∀y(¬Q(y) ∨ P (x, a))) ∨ ∃x∀y(P (y, x) ∧ ¬R(x, y))
+
+
+• 3.  lépés (kvantorkiemelési szabályok)
+∃x(∃y¬P (x, y)∨∀y(¬Q(y)∨P (x, a))∨∀y(P (y, x)∧¬R(x, y))).
+∃y kiemeléséhez először végrehajtjuk az y/y1 helyettesítést a
+∀y-al kezdődő első részformulában és az y/y2 helyettesítést a
+∀y-al kezdődő második részformulában.
+∃x(∃y¬P (x, y)∨∀y1(¬Q(y1)∨P (x, a))∨∀y2(P (y2, x)∧¬R(x, y2)))
+∃x∃y(¬P (x, y)∨∀y1(¬Q(y1)∨P (x, a))∨∀y2(P (y2, x)∧¬R(x, y2)))
+Utolsó lépés:
+∃x∃y∀y1∀y2(¬P (x, y)∨(¬Q(y1)∨P (x, a))∨(P (y2, x)∧¬R(x, y2)))
+Megkaptuk a prenex formulát.  A mag DNF.
+Ha a prenex formula törzse KNF-ben vagy DNF-ben van, akkor a formula normálforma:  prenex konjunktív / prenex diszjunktív formula.
+
+
+
+
+
+Tekintsük az első egzisztenciális kvantort a prefixumban, legyen ez
+∃xj.  Ha a formula igaz egy interpretációban, akkor az              x1, x2, . . . , xj−1 változók minden értékkombinációjához létezik legalább egy értéke az xj  változónak amelyre a formula értéke i. Ezt a tényt az f (x1, x2, . . . , xj−1) = xj  (Skolem) függvénnyel fejezzük ki.  Ez a függvény rendeli az xj -hez a megfelelő értéket az x1, x2, . . . , xj−1 változók minden változókiértékelése esetén.  Ezt a lépést végrehajtjuk a soronkövetkező egzisztenciális kvantorra addig amíg, minden egzisztenciális kvantort nem elimináltunk.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A Skolem normálforma magja KNF, az elsőrendű nyelv literáljaiból felírt klózok konjunkciós lánca.
+Példa
+∀x∀y∀y1((¬P (x, y) ∨ Q(y1)) ∧ (R(y, f (x) ∨ P (x, a))
+∧ (P (x, y1) ∨ ¬R(x, y)))
+A konjunkciós láncban a 3.  kvantorkiemelési szabály alkalmazható. Így a formula elsőrendű klózok konjunkciós láncaként felírt alakja:
+∀x∀y∀y1(¬P (x, y) ∨ Q(y1)) ∧ ∀x∀y∀y1(R(y, f (x)) ∨ P (x, a))
+∧ ∀x∀y∀y1(P (x, y1) ∨ R(x, y))
+
+
+Elsőrendű klózokból álló konjunkciós lánc kielégíthetetlenségének vizsgálata.
+Mivel egy kvantált formula értéke nem függ a benne szereplő kötött változó értékétől, ezeket a változókat át lehet nevezni.
+Átalakítható változóidegen elsőrendű klózhalmaz kielégíthetetlenségének vizsgálatává.
+
+
+
+
+
+
+Ha egy formula azonosan igaz |U | = n számosságon, akkor ennél kisebb számosságon is azonosan igaz.  (Tk.257.o.)
+
+Ha egy formula kielégíthető |U | = n számosságon, akkor ennél nagyobb számosságon is kielégíthető.(Tk.258.o.)
+
+Löwenheim-Skolem tétel Tk.258.o.
+Ha egy formula kielégíthető egyáltalán, akkor kielégíthető legfeljebb megszámlálhatóan végtelen U -n.
+
+
+
+
+
+
+A kielégíthetetlenségre hasonló tételek nincsenek.
+Egy S elsőrendű klózhalmaz kielégíthetetlen, ha minden interpretációban legalább egy klóza hamis.
+Egy elsőrendű klóz hamis egy interpretációban, ha az interpretáló struktúra U univerzumán kifejtve a magból kapott alapklózok közül legalább egy hamis ebben az interpretációban.
+
+
+
+Egy S elsőrendű klózhalmaz kielégíthetetlen U felett, ha az U -n definiálható minden struktúrában az alapklózok halmaza kielégíthetetlen.  Ha az S elsőrendű klózhalmazból az adott számosságú univerzumon a kifejtéssel megkapott alapklózok halmazából alaprezolúcióval levezethető az üres klóz, akkor a klózhalmaz ezen az univerzumon kielégíthetetlen.  Ha egy S kielégíthetetlen egy |U | = n számosságú univerzumon, még lehet nagyobb számosságon kielégíthető.
+
+
+
+
+
+
+Herbrand megmutatta, hogy ha tekintjük az elsőrendű klózhalmaz leíró nyelvének alaptermjeiből álló halmazt a Herbrand-univerzumot (H-t), akkor a klózhalmaz akkor lesz kielégíthetetlen, ha H-n kielégíthetetlen.  Minden elsőrendű nyelvhez (elsőrendű klózhalmazhoz) létezik legfeljebb megszámlálhatóan végtelen számosságú Herbrand-univerzum.
+Egy elsőrendű klózhalmaz kielégíthetetlen akkor és csak akkor, ha Herbrand-univerzumán kielégíthetetlen.
+
+
+
+
+
+Herbrand-univerzum konstrukciója lépésről lépésre:
+1 H0 = {S-ben előforduló konstansok halmaza} vagy ha a klózhalmazban nincs konstans szimbólum, akkor egy szimbolikus konstans {a}.
+2 Hi+1 = Hi ∪ Fi, ahol Fi azon alaptermek halmaza, amelyeket Hi elemeinek a klózhalmazban lévő függvényszimbólumokba való behelyettesítésével kapjuk.
+3 H∞ =		Hk k∈N
+
+
+Példa
+Tekintsük az S = {P (x),  ¬Q(y, z) ∨ ¬P (z),  Q(u, f (u))} klózhalmazt.
+H0 = {a} - fiktív konstans
+H1 = {a, f (a)}
+Hj = {a, f (a), f (f (a)), . . . , f (. . . f (a) . . .)} - j-szeres iteráció
+H∞ = {a, f (a), f (f (a)), . . . , f (. . . f (a) . . .), . . .}
+Alapklózhalmaz a Herbrand-univerzum felett:
+S = {P (a), ¬Q(a, a) ∨ ¬P (a), Q(a, f (a)), P (f (a)),
+¬Q(a, f (a)) ∨ ¬P (f (a)), . . .}
+Alaprezolúciós levezetés:
+1	Q(a, f (a))	P (f (a))	S
+2    P (f (a))	S
+3	Q(a, f (a))	res(1,2)
+4   Q(a, f (a))	S
+5   Q	res(3,4)
+
+
+
+
+
+
+
+
+
+Herbrand-interpretáció
+Legyen az S klózhalmaz leíró nyelve (Pr, Fn, Cnst ),
+Herbrand-univerzuma pedig H.  Herbrand-interpretációinak nevezzük és IH-vel jelöljük a nyelv azon interpretációit, melyek univerzuma éppen H, és
+− minden c ∈ Cnst konstansszimbólumhoz a c ∈ H
+univerzumelemet (önmagát) rendeli, és
+− minden k aritású f ∈ F n függvényszimbólumhoz hozzárendeli azt az f IH : Hk  → H műveletet, amelyikre minden             h1, h2, . . . , hk ∈ H esetén
+f IH (h1, h2, . . . , hk) = f (h1, h2, . . . , hk).
+
+Egy S elsőrendű klózhalmaz Herbrand-interpretációi tehát csak az S-ben előforduló predikátumszimbólumok interpretálásában különböznek.
+
+
+
+
+
+Az előzőek alapján, ha adva van az S elsőrendű klózhalmaz egy IH Herbrand-interpretációja, azt a következő módon is leírhatjuk: Legyen {A1, A2, . . .} az S klózhalmaz Herbrand-bázisa és legyen
+L  =	Ai,	ha Ai igaz IH-ban,
+¬Ai,	ha Ai hamis IH-ban.
+Ekkor a IH Herbrand-interpretációt az {L1, L2, . . . }
+alapliterál-halmaz egyértelműen megadja.
+
+
+
+Példa
+Legyen S = {P (x) ∨ Q(x), R(f (y))}. S Herbrand-univerzuma:
+H = {a, f (a), f (f (a)), f (f (f (a))), . . .}.
+S egy Herbrand-bázisa:
+
+{P (a), Q(a), R(a), P (f (a)), Q(f (a)), R(f (a)), . . .}.
+Néhány Herbrand-interpretáció:
+
+I1	=	{P (a), Q(a), R(a), P (f (a)), Q(f (a)), R(f (a)), . . . }
+I2	=	{¬P (a), ¬Q(a), ¬R(a), ¬P (f (a)), ¬Q(f (a)), ¬R(f (a)), . . . }
+I3	=	{P (a), Q(a), ¬R(a), ¬P (f (a)), Q(f (a)), ¬R(f (a)), . . . }
+
+
+Az I1, I2 és I3 interpretációk szemléltetése az előző Herbrand-bázis felhasználásával készül szemantikus fán:
+
+
+
+P (a)	¬P (a)
+
+
+Q(a)	¬Q(a)	Q(a)	¬Q(a)
+
+
+R(a)	¬R(a)	¬R(a)
+
+
+P (f (a))	¬P (f (a))	¬P (f (a))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Előállítjuk az elsőrendű klózok magjainak összes alappéldányát és az alapklózok halmazán ítéletlogikai rezolúcióval levezetjük az üres klózt.
+Az elsőrendű klózhalmaz:
+{∀x∀y(P (x) ∨ ¬Q(x, f (y))),
+∀z∀v(¬P (g(z)) ∨ ¬P (v)),
+∀u(Q(g(u), u))}
+Herbrand-univerzum:
+{a, g(a), f (a), g(f (a)), g(g(a)), f (f (a)), f (g(a)), . . . }
+(A klózhalmaz leíró nyelvének összes alaptermje)
+
+
+
+Alapklózok különböző helyettesítések esetén:
+x
+y
+z
+v
+u
+{P (x) ∨ ¬Q(x, f (y)),
+¬P (g(z)) ∨ ¬P (v),
+Q(g(u), u)}
+a
+a
+a
+a
+a
+{P (a) ∨ ¬Q(a, f (a)),
+¬P (g(a)) ∨ ¬P (a),
+Q(g(a), a)}
+g(a)
+a
+a
+g(a)
+a
+{P (g(a)) ∨ ¬Q(g(a), f (a)),
+¬P (g(a)) ∨ ¬P (g(a)), Q(g(a), a)}
+g(a)
+a
+a
+g(a)
+f (a)
+{P (g(a)) ∨ ¬Q(g(a), f (a)),
+¬P (g(a)) ∨ ¬P (g(a)),
+Q(g(f (a)), f (a))}
+g(f (a))
+a
+f (a)
+g(f (a))
+f (a)
+{P (g(f (a))) ∨ ¬Q(g(f (a)), f (a)),
+¬P (g(f (a))) ∨ ¬P (g(f (a))),
+Q(g(f (a)), f (a))}
+
+
+
+
+
+
+Alaprezolúció:
+1. Q(g(f (a)), f (a))	u	f (a)	1. X
+2.  P (g(f (a)))	Q(g(f (a)), f (a))	x	g(f (a)), y	a	2.  Y	X
+3.   P (g(f (a)))	3. Y
+4.	P (g(f (a)))	z	f (a), v	g(f (a))	4.	Y
+5.  Q	5. Q
+Legyen a bázis első két eleme P (g(f (a))), Q(g(f (a)), f (a)). Illesszük szemantikus fára az alapklózhalmazt.

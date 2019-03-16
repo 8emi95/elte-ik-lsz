@@ -1,0 +1,2462 @@
+﻿
+
+Logika ´es sz´am´ıt´aselm´elet
+I. r´esz Logika
+
+
+
+
+
+
+
+Tejfel M´at´e
+D´eli ´epu¨let, 2.606 matej@inf.elte.hu http://matej.web.elte.hu
+
+
+
+
+
+
+
+
+Bevezet˝o fogalmak
+
+
+´It´eletlogika
+´It´eletlogika le´ır´o nyelve – A´b´ec´e
+´It´eletlogika le´ır´o nyelve – Szintaxis
+´It´eletlogika le´ır´o nyelve – Szemantika
+
+
+
+Halmazok direktszorzata
+A ´es B tetsz˝oleges halmazok direkt vagy Descartes szorzata A × B
+az ¨osszes olyan (a, b) p´arok hamaza, ahol a ∈ A ´es b ∈ B.
+U n-nel jel¨olju¨k U -nak ¨onmag´aval vett n-szeres direktszorzat´at, ami az U elemeib˝ol k´epezhet˝o ¨osszes n elemu˝ sorozatok halmaza
+(U 2 = U × U ).
+
+
+
+
+
+Fu¨ggv´eny fajt´ai
+Legyen D a fu¨ggv´eny ´ertelmez´esi tartom´anya, R az ´ert´ekk´eszlete. Valamint legyen U egy tetsz˝oleges (individuum)halmaz.
+• Ha D = U , akkor a fu¨ggv´eny egyv´altoz´os,
+• ha D = U n (n > 1), akkor n v´altoz´os,
+• ha R = N, akkor a fu¨ggv´eny eg´esz´ert´eku˝,
+• ha R = {i, h}, akkor a fu¨ggv´eny logikai fu¨ggv´eny, m´as n´even rel´aci´o,
+• ha D = Rn (azaz a fu¨ggv´eny ´altal´anos alakja:  U n → U ), akkor a fu¨ggv´eny matematikai fu¨ggv´eny, m´as n´even mu˝velet,
+• az {i, h}n  → {i, h} alaku´ fu¨ggv´eny logikai mu˝velet.
+
+
+
+
+
+A lehets´eges k´etv´altoz´os logikai mu˝veletek k¨oz¨os igazs´agt´abl´aja.
+
+
+A t´abl´azat tartalmazza a 16 db 2-v´altoz´os mu˝veletet (a 4 db 1- ´es a 2 db 0-v´altoz´os mu˝velet is k¨oztu¨k van).  Ezekb˝ol a logika t´argyal´as´an´al a ¬, ∧, ∨, ⊃ mu˝veleteket haszn´aljuk csak.
+
+
+
+
+
+
+
+
+
+Nyelv =
+
+A´b´ec´e + Szintaxis + Szemantika
+
+
+
+Szerkezeti rekurzi´o
+• defin´ıci´os m´odszer
+• alapl´ep´es + rekurz´ıv l´ep´es
+  • p´elda:  logikai formul´akon ´ertelmezett fu¨ggv´enyek defin´ıci´oja Szerkezeti indukci´o
+• bizony´ıt´asi m´odszer rekurz´ıvan defini´alt struktu´r´ak tulajdons´agair´ol
+• alapl´ep´es + indukci´os l´ep´es
+• speci´alis p´elda:  teljes indukci´o
+• p´elda:  logikai formul´ak tulajdons´againak bizony´ıt´asa
+
+
+
+
+
+
+
+• A logika t´argya az emberi gondolkod´as vizsg´alata.
+• A logika c´elkitu˝z´ese.
+Gondolkod´asi folyamatok vizsg´alata sor´an
+a helyes k¨ovetkeztet´es t¨orv´enyeinek felt´ar´asa, u´jabb helyes k¨ovetkeztet´esi m´odszerek kidolgoz´asa.
+
+
+
+
+
+
+
+
+
+
+
+
+Bevezet˝o fogalmak
+
+
+´It´eletlogika
+´It´eletlogika le´ır´o nyelve – A´b´ec´e
+´It´eletlogika le´ır´o nyelve – Szintaxis
+´It´eletlogika le´ır´o nyelve – Szemantika
+
+
+
+
+
+T´argya az egyszeru˝ ´all´ıt´asok ´es a bel˝olu¨k logikai mu˝veletekkel kapott ¨osszetett ´all´ıt´asok vizsg´alata.
+
+
+  Tartalom	
+
+
+
+
+
+
+´It´eletlogika
+´It´eletlogika le´ır´o nyelve – A´b´ec´e
+´It´eletlogika le´ır´o nyelve – Szintaxis
+´It´eletlogika le´ır´o nyelve – Szemantika
+
+
+
+
+
+
+
+
+
+
+
+  Tartalom	
+
+
+
+
+
+
+´It´eletlogika
+´It´eletlogika le´ır´o nyelve – A´b´ec´e
+´It´eletlogika le´ır´o nyelve – Szintaxis
+´It´eletlogika le´ır´o nyelve – Szemantika
+
+
+
+
+
+
+
+´It´eletlogikai formula (Tk.4.1.2 def.)
+1 (alapl´ep´es) Minden ´ıt´eletv´altoz´o ´ıt´eletlogikai formula. (pr´ımformula)
+2 (rekurzi´os l´ep´es)
+• Ha A ´ıt´eletlogikai formula, akkor ¬A is az.
+• Ha A ´es B ´ıt´eletlogikai formul´ak, akkor (A ◦ B) is ´ıt´eletlogikai formula ”◦” a h´arom bin´er mu˝velet b´armelyike.
+3 Minden ´ıt´eletlogikai formula az 1, 2 szab´alyok v´eges sokszori alkalmaz´as´aval ´all el˝o.
+
+
+
+
+
+
+´It´eletlogik´aban a k¨ovetkez˝o formulaszerkezeteket ku¨l¨onb¨oztetju¨k meg:
+• ¬A neg´aci´os
+• A ∧ B konjukci´os
+• A ∨ B diszjunkci´os
+• A ⊃ B implik´aci´os
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Szerkezeti fa egy p´elda formul´ahoz:
+
+(((X ⊃ Y ) ∧ (Y ⊃ Z))⊃(¬X ∨ Z))
+((X ⊃ Y )∧(Y ⊃ Z))	(¬X∨Z)
+
+
+(X⊃Y )
+XY
+
+(Y ⊃Z)
+
+
+YZ
+
+¬X	Z
+
+
+X
+
+
+
+
+
+
+A teljesen z´ar´ojelezett formul´akat kevesebb z´ar´ojellel ´ırhatjuk fel, ha bevezetju¨k a mu˝veletek priorit´as´at:  ¬, ∧, ∨, ⊃ (cs¨okken˝o sorrend).
+
+A z´ar´ojelelhagy´as1 c´elja egy formul´ab´ol a legt¨obb z´ar´ojel elhagy´asa a formula szerkezet´enek megtart´asa mellett.
+
+
+
+
+
+
+
+1Tk. 52. o.
+
+
+
+
+
+L´ep´esei:
+1 A formula ku¨ls˝o z´ar´ojel p´arj´anak elhagy´asa (ha m´eg van ilyen).
+2 Egy bin´er logikai ¨osszek¨ot˝o hat´ask¨or´ebe es˝o r´eszformul´ak ku¨ls˝o z´ar´ojelei akkor hagyhat´ok el, ha a r´eszformula f˝o logikai
+¨osszek¨ot˝ojele nagyobb priorit´asu´ n´ala.
+
+
+
+
+
+
+
+
+• Konjunkci´os:  A1 ∧ A2 ∧ . . . ∧ An (tetsz˝olegesen z´ar´ojelezhet˝o)
+• Diszjunkci´os:  A1 ∨ A2 ∨ . . . ∨ An (tetsz˝olegesen z´ar´ojelezhet˝o)
+• Implik´aci´os:  A1 ⊃ A2 ⊃ . . . ⊃ An (default z´ar´ojelez´ese jobbr´ol-balra) A1 ⊃ (A2 ⊃ . . . (An−1 ⊃ An) . . .)
+
+
+
+
+
+
+
+
+
+
+
+
+
+Egy A formula logikai ¨osszetetts´ege:  A(A)
+
+
+
+
+
+P´elda
+A (X	Y )  (Y	Z)	X	Z formula	mu˝veletet tartalmaz´o r´eszformul´ai:
+1   A[(X	Y )  (Y	Z)	X	Z] = 6
+2   A[(X	Y )  (Y	Z)] = 3
+Ezek k¨ozu¨l a 2.  formula az	hat´ask¨ore.  Egy mu˝velet hat´ask¨or´ebe es˝o formul´ak egyben k¨ozvetlen komponensek is.
+
+
+
+
+
+
+
+
+´It´eletlogika
+´It´eletlogika le´ır´o nyelve – A´b´ec´e
+´It´eletlogika le´ır´o nyelve – Szintaxis
+´It´eletlogika le´ır´o nyelve – Szemantika
+
+
+
+
+
+
+A nyelv ´ab´ec´ej´enek ´ertelmez´ese (interpret´aci´oja - modellez´ese).
+Az ´ıt´eletlogika ´ab´ec´ej´eben m´ar csak az ´ıt´eletv´altoz´okat kell interpret´alni.  Az ´ıt´eletv´altoz´ok befutj´ak az ´all´ıt´asok halmaz´at.  Ha megmondjuk melyik ´ıt´eletv´altoz´o melyik ´all´ıt´ast jelenti, akkor a v´altoz´o igazs´ag´ert´ek´et adtuk meg.  Annak r¨ogz´ıt´es´et melyik
+´ıt´eletv´altoz´o i(gaz) ´es melyik h(amis) igazs´ag´ert´eku˝
+interpret´aci´onak nevezzu¨k.
+
+
+
+
+I(x) jel¨oli az x ´ıt´eletv´altoz´o ´ert´ek´et az I interpret´aci´oban.
+n db ´ıt´eletv´altoz´o interpret´aci´oinak sz´ama 2n.
+Megad´asa:
+• Felsorol´assal
+• Szemantikus f´aval
+• Stb.
+n = 3 eset´en legyenek az ´ıt´eletv´altoz´ok X, Y, Z.  Ezen v´altoz´ok egy sorrendj´et b´azisnak nevezzu¨k.  Legyen most a b´azis X, Y, Z.  Ekkor az ¨osszes interpret´aci´ot megadhatjuk t´abl´azatos felsorol´assal, vagy szemantikus f´aval is.
+
+
+
+
+XYZiiiiihihiihhhiihihhhihhh
+
+t´abl´azat: Interpret´acio´
+
+megad´asa t´abl´azattal X, Y, Z b´azis eset´en
+
+
+
+
+
+Szemantikus fa
+Egy n-v´altoz´os szemantikus fa egy n-szintu˝ bin´aris fa, ahol a szintek a b´azisbeli v´altoz´oknak vannak megfeleltetve.  Egy X v´altoz´o szintj´en a csu´csokb´ol kiindul´o ´elp´arokhoz X, ¬X c´ımk´eket rendelu¨nk.  X jelent´ese X igaz, ¬X jelent´ese X hamis az ´elhez tartoz´o interpret´aci´okban, ´ıgy egy n-szintu˝ szemantikus fa ´again az
+¨osszes (2n ) lehets´eges igazs´agki´ert´ekel´es (I interpret´aci´o) megjelenik.
+
+
+
+
+Szemantikus fa az X, Y, Z logikai v´altoz´okra, mint b´azisra:
+
+iii	iih	ihi	ihh	hii	hih	hhi	hhh
+
+
+
+
+
+
+Formula helyettes´ıt´esi ´ert´eke I interpret´aci´oban:  BI (C).
+
+
+
+
+
+
+Formula igazs´agt´abl´aja
+Egy n-v´altoz´os formula igazs´agt´abl´aja egy olyan n + 1 oszlopb´ol
+´es 2n + 1 sorb´ol ´all´o t´abl´azat, ahol a fejl´ecben a b´azis (a formula v´altoz´oi r¨ogz´ıtett sorrendben) ´es a formula szerepel.  A sorokban a v´altoz´ok alatt az interpret´aci´ok (a v´altoz´ok igazs´agki´ert´ekel´esei), a formula alatt a formula helyettes´ıt´esi
+´ert´ekei tal´alhat´ok.
+
+
+Egy n-v´altoz´os formula az igazs´agt´abl´aj´aval megadott   i, h  n	i, h n-v´altoz´os logikai mu˝veletet ´ır le.
+
+XYZ(¬(Z ⊃ ¬X) ∨ Y )iiiiiihiihiiihhhhiiihihihhihhhhht´abl´azat: A (¬(Z ⊃ ¬X) ∨ Y ) formula igazs´agt´abl´aja
+Egy formula igazhalmaza azon	interpret´aci´ok halmaza, amelyekre a formula helyettes´ıt´esi ´ert´eke igaz.
+Egy formula hamishalmaza azon	interpret´aci´ok halmaza, amelyekre a formula helyettes´ıt´esi ´ert´eke hamis.
+
+
+Logika ´es sz´am´ıt´aselm´elet
+I. r´esz Logika
+M´asodik el˝oad´as
+
+
+
+
+´It´eletlogika - Szemantika (folytat´as)
+
+
+Formul´ak ´es formulahalmazok szemantikus tulajdons´agai
+
+
+Szemantikus k¨ovetkezm´enyfogalom
+
+
+Formaliz´al´as az ´ıt´eletlogik´aban
+
+
+
+
+Egy formula igaz-/hamishalmaz´anak el˝o´all´ıt´as´ahoz keressu¨k a formula b´azis´anak interpret´aci´oira azokat a felt´eteleket, amelyek biztos´ıtj´ak, hogy ˝o az igazhalmaz illetve a hamishalmaz eleme legyen.
+Ennek eszk¨oze a ϕAα igazs´ag´ert´ekel´es fu¨ggv´eny (α = i vagy h), amely egy A formula eset´en az igazs´agt´abla fel´ır´asa n´elku¨l megadja a formula k¨ozvetlen r´eszformul´ain keresztu¨l az A interpret´aci´oira vonatkoz´o ϕAi ´es a ϕAh  felt´eteleket, amelyeket teljes´ıt˝o interpret´aci´okban a formula ´ert´eke i vagy h lesz.
+A ϕAα fu¨ggv´eny ´ertelmez´esi tartom´anya a formul´ak halmaza
+´ert´ekk´eszlete a formula interpret´aci´oira vonatkoz´o felt´etelek.
+
+
+A ϕ-igazs´ag´ert´ekel´es fu¨ggv´eny defini´al´asa szerkezeti rekurzi´oval
+1 Ha A pr´ımformula (´ıt´eletv´altoz´o), akkor ϕAi  felt´etelt pontosan azok az I interpret´aci´ok teljes´ıtik, amelyekben I(A) = i, a ϕAh  felt´etelt pedig azok, amelyekben I(A) = h.
+2 A ϕ(  A)  felt´etelek pontosan akkor teljesu¨lnek, ha teljesu¨lnek a ϕAh  felt´etelek.
+3 A ϕ(A	B)i  felt´etelek pontosan akkor teljesu¨lnek, ha teljesu¨lnek mind a ϕAi, mind a ϕBi  felt´etelek.
+4 A ϕ(A	B)i  felt´etelek pontosan akkor teljesu¨lnek, ha teljesu¨lnek a ϕAi  vagy a ϕBi  felt´etelek.
+5 A ϕ(A	B)i  felt´etelek pontosan akkor teljesu¨lnek, ha teljesu¨lnek a ϕAh  vagy a ϕBi  felt´etelek.
+
+A ϕ(¬A)h, a ϕ(A ∧ B)h, a ϕ(A ∨ B)h, ´es a ϕ(A ⊃ B)h felt´etelek
+´ertelemszeru˝en ad´odnak.
+
+
+ϕ(A ∧ B)i
+
+
+
+ϕ(¬A)i
+
+ϕAh
+
+ϕAi
+
+
+ϕBi
+
+
+
+
+ϕ(A ∨ B)i
+ϕAi	ϕBi
+
+ϕ(A ⊃ B)i
+
+	
+ϕAh	ϕBi
+
+
+
+ϕXh	ϕ(Y ∧ Z ∨ ¬X)i
+(diszjunkci´os)
+
+
+ϕ(Y ∧ Z)i
+(konjukci´os)
+ϕY i
+ϕZi
+
+ϕ¬Xi
+(neg´aci´os)
+
+
+ϕXh
+
+
+
+ϕXh	ϕ(Y ∧ Z ∨ ¬X)i
+(diszjunkci´os)
+
+
+ϕ(Y ∧ Z)i
+(konjukci´os)
+ϕY i
+ϕZi
+
+ϕ¬Xi
+(neg´aci´os)
+
+
+ϕXh
+
+
+1.´ag2.´ag3.´agXYZXYZXYZh∼∼∼iih∼∼
+
+
+ϕ(X ⊃ Y ∧ Z ∨ ¬X)i
+(implik´acios)
+ϕXh	ϕ(Y ∧ Z ∨ ¬X)i
+(diszjunkci´os)
+
+Az igazhalmaz:
+
+
+
+
+ϕ(Y ∧ Z)i
+(konjukci´os)
+ϕY i
+ϕZi
+
+ϕ¬Xi
+(neg´aci´os)
+
+
+ϕXh
+
+
+1.´ag2.´ag3.´agXYZXYZXYZh∼∼∼iih∼∼
+
+
+
+ϕ(X ⊃ Y ∧ Z ∨ ¬X)h  (¬implik´aci´os)
+ϕXi
+ϕ(Y ∧ Z ∨ ¬X)h  (¬diszjunkci´os)
+ϕ(¬X)h ϕ(Y ∧ Z)h
+
+ϕXi
+ϕY h	ϕZh
+
+
+ϕ(X ⊃ Y ∧ Z ∨ ¬X)h  (¬implik´aci´os)
+ϕXi
+ϕ(Y ∧ Z ∨ ¬X)h  (¬diszjunkci´os)
+ϕ(¬X)h ϕ(Y ∧ Z)h
+
+ϕXi
+ϕY h	ϕZh
+
+1.´ag2.´agXYZXYZih∼i∼h
+
+
+ϕ(X ⊃ Y ∧ Z ∨ ¬X)h  (¬implik´aci´os)
+ϕXi
+ϕ(Y ∧ Z ∨ ¬X)h  (¬diszjunkci´os)
+ϕ(¬X)h ϕ(Y ∧ Z)h
+
+ϕXi
+ϕY h	ϕZh
+
+A hamishalmaz:
+XYZiihihiihh
+
+1.´ag2.´agXYZXYZih∼i∼h
+
+
+
+´It´eletlogika - Szemantika (folytat´as)
+
+
+Formul´ak ´es formulahalmazok szemantikus tulajdons´agai
+
+
+Szemantikus k¨ovetkezm´enyfogalom
+
+
+Formaliz´al´as az ´ıt´eletlogik´aban
+
+
+
+Kiel´eg´ıthet˝os´eg/kiel´eg´ıthetetlens´eg/tautol´ogia formul´akra
+(Tk.4.3.1.)
+Egy B formula kiel´eg´ıthet˝o, ha legal´abb egy interpret´aci´o kiel´eg´ıti.
+
+Egy B formula kiel´eg´ıthetetlen, ha egyetlen interpret´aci´o sem el´eg´ıti ki.
+
+Egy B formula tautol´ogia (|=0 B), ha minden interpret´aci´o kiel´eg´ıti.  A tautologi´at ´ıt´eletlogikai t¨orv´enynek is nevezik.
+
+
+
+
+
+
+
+
+
+
+Legyen F = {A1, A2, . . . , An} formulahalmaz.
+
+
+Kiel´eg´ıthet˝os´eg/kiel´eg´ıthetetlens´eg formulahalmazokra
+(Tk.4.3.12.)
+Egy F formulahalmaz kiel´eg´ıthet˝o, ha legal´abb egy interpret´aci´o kiel´eg´ıti.
+
+Egy F formulahalmaz kiel´eg´ıthetetlen, ha b´armely interpret´aci´oban legal´abb egy formul´aja h (nincs olyan interpret´aci´o, ami kiel´eg´ıten´e).
+
+
+
+
+´It´eletlogika - Szemantika (folytat´as)
+
+
+Formul´ak ´es formulahalmazok szemantikus tulajdons´agai
+
+
+Szemantikus k¨ovetkezm´enyfogalom
+
+
+Formaliz´al´as az ´ıt´eletlogik´aban
+
+
+Szemantikus k¨ovetkezm´eny (Tk.4.4.1.)
+Egy tt formula szemantikus vagy tautologikus k¨ovetkezm´enye
+az F = {F1, F2, . . . , Fn} formulahalmaznak,
+ha minden olyan I interpret´aci´ora, amelyre I |=0 {F1, F2, . . . , Fn} fenn´all, I |=0 tt is fenn´all (ha I modellje {F1, F2, . . . , Fn}-nek, akkor modellje tt-nek is).
+Jel¨ol´es:  {F1, F2, . . . , Fn} |=0 tt
+
+
+Teh´at (F, tt) akkor helyes k¨ovetkeztet´esforma, ha teljesu¨l, hogy
+F |=0 tt ´es l´etezik olyan I interpret´aci´o, melyre I |=0 F .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ennek alapj´an azegyik  szemantikus eld¨ont´esprobl´ema: tetsz˝oleges ´ıt´eletlogikai formul´ar´ol eld¨onteni, hogy kiel´eg´ıthetetlen-e.
+
+
+
+
+
+
+
+
+Ennek alapj´an am´asik  szemantikus eld¨ont´esprobl´ema: tetsz˝oleges ´ıt´eletlogikai formul´ar´ol eld¨onteni, hogy tautol´ogia-e.
+
+
+
+
+
+
+
+
+
+
+
+
+P´eld´ak ´atalak´ıt´asi szab´alyokra
+X ⊃ Y ∼0 ¬X ∨ Y
+¬¬X ∼0 X
+De Morgan szab´alyok:
+1  ¬(X ∧ Y ) ∼0 ¬X ∨ ¬Y
+2  ¬(X ∨ Y ) ∼0 ¬X ∧ ¬Y
+Egyszeru˝s´ıt´esi szab´alyok:
+1  (X ∨ d) ∧ (¬X ∨ d) ∼0 d
+2  (X	k)	(  X	k)	0 k
+ahol d elemi diszjunkci´o ´es k elemi konjunkci´o.
+
+
+
+
+
+
+
+
+F = {Z ⊃ M ∨ P, Z, ¬P }
+
+PMZZ ⊃ M ∨ PZ¬Plszk.k¨ov.iiiiihhh/iiihihhhh/iihiiihhh/iihhihhhh/ihiiiiiiihihihihh/ihhihiihh/ihhhihihh/iCsak egy igazs´ag´ert´ekre kiel´eg´ıthet˝o a felt´etelhalmaz.
+
+
+
+Visszak¨ovetkeztet´es
+Az F felt´etelhalmaz ´es a B k¨ovetkezm´enyformula ismeret´eben eld¨ontju¨k, hogy B val´oban k¨ovetkezm´enye-e F-nek.  Mivel F |=0 B pontosan akkor, ha az F ∪ {¬B} formulahalmaz kiel´eg´ıthetetlen.
+M´as sz´oval B pontosan akkor k¨ovetkezm´enye F-nek, ha minden olyan interpret´aci´oban, ahol B hamis, az F kiel´eg´ıthetetlen.
+
+
+
+
+
+´It´eletlogika - Szemantika (folytat´as)
+
+
+Formul´ak ´es formulahalmazok szemantikus tulajdons´agai
+
+
+Szemantikus k¨ovetkezm´enyfogalom
+
+
+Formaliz´al´as az ´ıt´eletlogik´aban
+
+
+
+
+
+
+Tegyu¨k fel, hogy adott valamilyen k¨oznapi vagy matematikai probl´ema.  Ennek term´eszetes nyelvu˝ egyszeru˝ vagy ¨osszetett kijelent˝o mondatokkal val´o le´ır´as´at ismerju¨k.
+Az egyszeru˝ kijelent˝o mondatok formaliz´al´as´ara bevezetu¨nk egy
+azonos´ıt´ot (´all´ıt´asjel, ´ıt´eletv´altoz´o).
+Az ¨osszetett mondatot analiz´aljuk, ´atalak´ıtjuk azonos ´ertelmu˝, de egyszeru˝ kijelent˝o mondatokb´ol olyan nyelvtani ¨osszek¨ot˝okkel fel´ırt mondatt´a, ahol a nyelvtani ¨osszek¨ot˝ok egyben logikai
+¨osszek¨ot˝ok (logikai mu˝veletek).
+
+
+
+
+1Tk.54-55.o.
+
+
+
+
+
+Bet¨ortek egy ´aruh´azba.  A nyomoz´asi jegyz˝ok¨onyv a k¨ovetkez˝oket tartalmazza:
+Ha f´erfi a tettes, akkor kistermetu˝.
+Ha kistermetu˝, akkor az ablakon m´aszott be.
+A tettes f´erfi vagy legal´abbis f´erfiruh´at hordott.
+Ha f´erfiruh´at hordott ´es felt´eve, hogy a szemtanu´ vallom´asa hiteles akkor az ablakon m´aszott be.
+A helysz´ıni szemle meg´allap´ıtotta, hogy az ablakon senki sem m´aszott be.
+A nyomoz´ok azt sejtik, hogy a tettes nem f´erfi.
+
+
+
+Bet¨ortek egy ´aruh´azba.  A nyomoz´asi jegyz˝ok¨onyv a k¨ovetkez˝oket tartalmazza:
+Ha f´erfi a tettes( F ), akkor kistermetu˝( K).  F ⊃ K
+Ha kistermetu˝, akkor az ablakon m´aszott be( A).  K ⊃ A
+A tettes f´erfi vagy legal´abbis f´erfiruh´at hordott( R).  F ∨ R
+Ha f´erfiruh´at hordott ´es felt´eve, hogy a szemtanu´ vallom´asa hiteles (H), akkor az ablakon m´aszott be.  (R ∧ H) ⊃ A
+A helysz´ıni szemle meg´allap´ıtotta, hogy az ablakon senki sem m´aszott be.  ¬A
+A nyomoz´ok azt sejtik, hogy a tettes nem f´erfi.  ¬F
+A felt´etelhalmaz:  {F ⊃ K,  K ⊃ A,  F ∨ R,  (R ∧ H) ⊃ A,  ¬A}
+A felt´etelez´es szerinti k¨ovetkezm´eny:  ¬F
+
+
+
+El˝orek¨ovetkeztet´es:
+Az {F ⊃ K, K ⊃ A, F ∨ R, (R ∧ H) ⊃ A, ¬A} formulahalmazt egyetlen interpret´aci´o el´eg´ıti ki:
+A = h,  F = h,  K = h,  R = i,  H = h, azaz a legszu˝kebb k¨ovetkez´enyt le´ır´o formula:  ¬A ∧ ¬F ∧ ¬K ∧ R ∧ ¬H (¬A ∧ ¬F ∧ ¬K ∧ R ∧ ¬H) ⊃ ¬F tautol´ogia, ´ıgy ¬F k¨ovetkezm´eny.
+
+Visszak¨ovetkeztet´es:
+¬F k¨ovetkezm´eny, mivel a neg´altj´at hozz´av´eve a felt´etelhalmazhoz, a kapott formulahalmaz:
+{F ⊃ K,  K ⊃ A,  F ∨ R,  (R ∧ H) ⊃ A,  ¬A,  F } kiel´eg´ıthetetlen.
+
+
+Logika ´es sz´am´ıt´aselm´elet
+I. r´esz Logika
+Harmadik el˝oad´as
+
+
+
+
+
+
+
+Els˝orendu˝ logika – bevezet´es
+
+
+
+Az els˝orendu˝ logika szintaxisa
+
+
+
+Az ´ıt´eletlogik´aban nem foglalkoztunk az ´all´ıt´asok min˝os´ıt´es´evel ´es az
+´all´ıt´asok le´ır´as´aval.  Az ´all´ıt´as defin´ıci´oja szerint az ´all´ıt´ast egy kijelent˝o mondattal ki lehet fejezni.
+Ha a kijelent˝o mondat alanya valamely konkr´et dolog, akkor az ´all´ıt´ast nulladrendu˝ ´all´ıt´asnak h´ıvjuk.  Az ilyen ´all´ıt´asok form´alis le´ır´as´ara egy rel´aci´ot (logikai fu¨ggv´enyt) defini´alunk.
+
+
+Az ´all´ıt´as konkr´et egyedekkel behelyettes´ıtett rel´aci´o.  Pl.:  E(9) vagy L(9,6,3) ´all´ıt´asok, de L(9,6,z) nem ´all´ıt´as (param´eteres ´all´ıt´as).
+
+
+
+
+Ha a kijelent˝o mondat alanya egy halmaz, akkor az ´all´ıt´ast
+els˝orendu˝ ´all´ıt´asnak h´ıvjuk.
+Ilyenkor az ´all´ıt´as az ¨osszes elemre egyideju˝leg fenn´all´o meg´allap´ıt´ast/´altal´anos´ıt´ast vagy a halmaz bizonyos elemeire (nem felt´etlenu¨l mindre) fenn´all´o meg´allap´ıt´ast/l´etez´est fogalmaz meg.
+Le´ır´asukhoz a kvantorokat (∀,∃) haszn´aljuk.
+
+
+
+
+
+
+
+
+Az 1800-as ´evek v´eg´en ´es az 1900-as ´evek elej´en a matematikai struktu´r´ak (halmazelm´elet ´es az aritmetika – sz´amelm´elet) logikai vizsg´alat´ahoz meg kellett teremteni mind a nulladrendu˝, mind az els˝orendu˝ ´all´ıt´asok le´ır´as´ara szolg´al´o eszk¨oz¨oket.  Szu¨ks´egess´e v´alt a matematikai struktu´r´akat le´ır´o nyelv defini´al´asa.
+
+
+
+Defin´ıci´o
+A matematikai struktu´ra egy (U, R, M, K) halmazn´egyes, ahol
+• U :  nem u¨res halmaz, a struktu´ra ´ertelmez´esi tartom´anya (amennyiben U egyfajt´aju´ elemekb˝ol ´all)
+• R:  az U -n ´ertelmezett n-v´altoz´os (n = 1, 2, . . . , k) logikai fu¨ggv´enyek (alaprel´aci´ok) halmaza
+• M :  az U -n ´ertelmezett n-v´altoz´os (n = 1, 2, . . . , k) matematikai fu¨ggv´enyek (alapmu˝veletek) halmaza
+• K:  az U megjel¨olt elemeinek egy (esetleg u¨res) r´eszhalmaza
+
+
+
+
+
+
+Adott matematikai struktu´ra le´ır´o nyelv ´ab´ec´ej´enek logik´an k´ıvu¨li r´esze ´all:
+• az R halmazbeli alaprel´aci´ok neveib˝ol
+• az M halmazbeli alapmu˝veletek neveib˝ol
+• a K halmazbeli elemek neveib˝ol
+Ezekkel a nevekkel m´ar lehet egyszeru˝ (nulladrendu˝ ´es param´eteres) ´all´ıt´asokat le´ırni.  Az R, M, K-beli nevek a le´ır´o nyelv logik´an k´ıvu¨li r´esz´et k´epezik.
+
+
+
+
+
+Az ¨osszetett ´all´ıt´asok ´es az els˝orendu˝ ´all´ıt´asok le´ır´as´ara kib˝ov´ıtju¨k az ´ab´ec´et a logikai szimb´olumokkal (az ´ab´ec´e logikai r´esze):
+• individuumv´altoz´ok
+• un´er ´es bin´er logikai mu˝veleti jelek ¬, ∧, ∨, ⊃
+• kvantorok ∀, ∃
+• elv´alaszt´ojelek ( ) ,
+Ez egyu¨tt egy adott matematikai struktu´ra logikai le´ır´o nyelv´enek az ´ab´ec´eje.
+
+
+
+
+
+
+(N0; =; s, +, ∗; 0) egyu¨ttes, ahol
+• x, y, . . .:  individuumv´atoz´ok befutj´ak a term´eszetes sz´amok halmaz´at (N0-t)
+•  =:  az {(x, x)} igazhalmazu´ alaprel´aci´o neve
+• s:  az egyv´altoz´os r´ak¨ovetkez´es fu¨ggv´eny neve
+•  + ´es ∗:  rendre az ¨osszead´as ´es a szorz´as mu˝veletek nevei
+• 0:  a megjel¨olt univerzumelem neve (az az elem, amely nem tartozik a r´ak¨ovetkez´es fu¨ggv´eny ´ert´ekk´eszlet´ebe)
+
+
+
+
+1Tk.36-37.o.
+
+
+
+
+A struktu´ra szignatu´r´aja alatt az alaprel´aci´ok ´es az alapmu˝veletek arit´asait, valamint a konstansok sz´am´at megad´o ν1, ν2, ν3 eg´esz ´ert´eku˝ fu¨ggv´enyeket ´ertju¨k.
+Esetu¨nkben:  ν1(=) = 2, ν2(s) = 1, ν2(+) = 2, ν2(∗) = 2, ν3 = 1
+Felsorol´assal megadva:
+
+Az elemi aritmetika le´ır´o nyelv´enek ´ab´ec´ej´eben az N0 kezel´es´ere a
+v´altoz´ok (x, y, . . .) szolg´alnak (individuumv´altoz´ok), az
+{=, s, +, ∗; 0} jelek a megfelel˝o lek´epez´esek azonos´ıt´oi.  A le´ır´o nyelv szignatu´r´aja ugyanaz, mint a struktu´r´a´e.
+
+
+
+
+Az alaprel´aci´okkal (itt az = rel´aci´oval) lehet ´all´ıt´asokat le´ırni, pl.
+2 = 3, 5 = 5.  De nem ´all´ıt´as pl.  y = 5 vagy z = w (param´eteres
+´all´ıt´asok).  Egy´eb ismert egyszeru˝ ´all´ıt´asokat pl.  a kisebb egyenl˝o rel´aci´ot ezen a nyelven csak ¨osszetett ´all´ıt´as form´aj´aban lehet fel´ırni (formaliz´alni).  Ehhez a nyelv ´ab´ec´ej´et logikai r´esszel b˝ov´ıtju¨k ki. Ezek:
+• individuumv´altoz´ok:  x, y, . . .
+• logikai ¨osszek¨ot˝ojelek:  ¬, ∧, ∨, ⊃
+• kvantorok: ∀, ∃
+• elv´alaszt´ojelek:  ( ) ,
+
+
+
+Defini´aljuk (formaliz´aljuk) az aritmetika logikai le´ır´o nyelv´en a ≤
+rel´aci´ot:
+
+Megjegyz´es:  Az aritmetika univerzuma egyfajt´aju´ elemekb˝ol, a term´eszetes sz´amokb´ol ´allt.  Egy matematikai struktu´ra univerzuma t¨obbfajt´aju´ elemekb˝ol is ´allhat.  P´eld´aul a t´ergeometri´aban pontok, egyenesek ´es s´ıkok alkotj´ak az ´ertelmez´esi tartom´anyt.  Ekkor a le´ır´o nyelv ´ab´ec´ej´eben a fajt´ak elnevez´es´ere is bevezetu¨nk jeleket. Esetu¨nkben ezek a nevek:  p, e, s. ´Igy az ´ertelmez´esi tartom´any
+Up ∪ Ue ∪ Us lesz, a struktu´ra pedig az (Up ∪ Ue ∪ Us, R, M, K)
+egyu¨ttes.
+
+
+
+
+
+
+
+
+
+Olyan ´ab´ec´evel kell hogy rendelkezzen, melynek a logik´an k´ıvu¨li szimb´olumai ´es azok szignatu´r´aja param´eterez´essel b´armely adott matematikai struktu´ra szignatu´r´aj´aval megfeleltethet˝o kell legyen,
+´es enn´elfogva a szimb´olumok lehessenek a struktu´ra rel´aci´oinak, mu˝veleteinek ´es megjel¨olt elemeinek a nevei.  M´as sz´oval a nyelv alkalmas kell, hogy legyen tetsz˝oleges szignatu´r´aju´ matematikai struktu´r´ak le´ır´as´ara.
+
+
+
+
+Egyf´ele elemb˝ol ´all´o U eset´en az (U, R, M, K) struktu´ra le´ır´o nyelv logik´an k´ıvu¨li r´esze lehet a k¨ovetkez˝o.
+Az L nyelv ´ab´ec´eje:  (P r, F n, Cnst), szignatu´r´aja:  (ν1, ν2, ν3).
+• P r:  predik´atumszimb´olumok halamaza
+ν1:  P ∈ P r-re megadja P arit´as´at (k)
+• F n:  fu¨ggv´enyszimb´olumok halamaza
+ν2:  f ∈ F n-re megadja f arit´as´at (k)
+• Cnst:  konstansszimb´olumok halamaza
+ν3:  megadja a konstansok sz´am´at
+
+
+T¨obbf´ele elemb˝ol ´all´o U eset´en az (U, R, M, K) struktu´ra le´ır´o nyelv logik´an k´ıvu¨li r´esze lehet a k¨ovetkez˝o.
+Az L nyelv ´ab´ec´eje:  (Srt, P r, F n, Cnst), szignatu´r´aja:  (ν1, ν2, ν3).
+• Srt:  nemu¨res halmaz, melynek πj  elemei fajt´akat szimboliz´alnak
+• P r:  predik´atumszimb´olumok halamaza
+ν1:  P ∈ P r-re megadja P arit´as´at (k), ´es hogy milyen fajt´aju´ak az egyes argumentumok (π1, π2, . . . , πk)
+• F n:  fu¨ggv´enyszimb´olumok halamaza
+ν2:  f ∈ F n-re megadja f arit´as´at (k), ´es hogy milyen fajt´aju´ak az egyes argumentumok, valamint a fu¨ggv´eny ´ert´eke (π1, π2, . . . , πk; πf )
+• Cnst:  konstansszimb´olumok halamaza
+ν3:  megadja minden fajt´ahoz a konstansok sz´am´at.
+
+
+
+
+
+• ku¨l¨onb¨oz˝o fajt´aju´ individuumv´altoz´ok (minden fajt´ahoz megsz´aml´alhat´oan v´egtelen sok):  x, y, yk, . . .
+• un´er ´es bin´er logikai mu˝veleti jelek:  ¬, ∧, ∨, ⊃
+• kvantorok: ∀, ∃
+• elv´alaszt´ojelek:  ( ) ,
+Az L nyelv ´ab´ec´ej´ere V [Vν ]-vel hivatkozunk, ahol Vν  adja meg a
+(ν1, ν2, ν3) szignatu´r´aju´ (Srt, P r, F n, Cnst) halmazn´egyest.
+
+
+
+
+
+
+
+Els˝orendu˝ logika – bevezet´es
+
+
+
+Az els˝orendu˝ logika szintaxisa
+
+
+
+
+
+
+
+
+A nyelv kifejez´esei inform´alisan:
+• termek:  a matematikai lek´epez´eseket szimboliz´alj´ak
+• formul´ak:  a logikai lek´epez´eseket szimboliz´alj´ak
+
+
+
+
+
+
+
+Egyfajt´aju´ eset.
+Termek – Lt(Vν)
+1 (alapl´ep´es) Minden individuumv´altoz´o ´es konstans szimb´olum term.
+2 (rekurz´ıv l´ep´es) Ha az f ∈ F n k-v´altoz´os fu¨ggv´enyszimb´olum
+´es t1, t2, . . . , tk termek, akkor f (t1, t2, . . . , tk) is term.
+3 Minden term az 1, 2 szab´alyok v´eges sokszori alkalmaz´as´aval
+´all el˝o.
+
+
+
+
+
+2Tk.112.o.
+
+
+
+Egyfajt´aju´ eset.
+Formul´ak – Lf (Vν)
+1 (alapl´ep´es) Ha a P ∈ P r k-v´altoz´os predik´atumszimb´olum ´es t1, t2, . . . , tk termek, akkor P (t1, t2, . . . , tk) formula (atomi formula).
+2 (rekurz´ıv l´ep´es)
+• Ha A formula, akkor ¬A is az.
+• Ha A ´es B formul´ak, akkor (A   B) is formula, ahol	a h´arom bin´er mu˝velet b´armelyike.
+3 Ha A formula, akkor ∀xA ´es ∃xA is az.
+4 Minden formula az 1, 2, 3 szab´alyok v´eges sokszori alkalmaz´as´aval ´all el˝o.
+
+
+
+
+
+T¨obbfajt´aju´ eset.
+Termek – Lt(Vν)
+1 (alapl´ep´es) Minden π ∈ Srt fajt´aju´ individuumv´altoz´o ´es konstans szimb´olum π fajt´aju´ term.
+2 (rekurz´ıv l´ep´es) Ha az f ∈ F n (π1, π2, . . . , πk; πf ) fajt´aju´ fu¨ggv´enyszimb´olum ´es t1, t2, . . . , tk rendre π1, π2, . . . , πk fajt´aju´ termek, akkor f (t1, t2, . . . , tk) πf  fajt´aju´ term.
+3 Minden term az 1, 2 szab´alyok v´eges sokszori alkalmaz´as´aval
+´all el˝o.
+
+
+T¨obbfajt´aju´ eset.
+Formul´ak – Lf (Vν)
+1 (alapl´ep´es) Ha a P ∈ P r (π1, π2, . . . , πk) fajt´aju´ predik´atumszimb´olum ´es t1, t2, . . . , tk rendre π1, π2, . . . , πk fajt´aju´ termek, akkor P (t1, t2, . . . , tk) formula (atomi formula).
+2 (rekurz´ıv l´ep´es)
+• Ha A formula, akkor ¬A is az.
+• Ha A ´es B formul´ak, akkor (A   B) is formula, ahol	a h´arom bin´er mu˝velet b´armelyike.
+3 Ha A formula, akkor ∀xA ´es ∃xA is az.
+4 Minden formula az 1, 2, 3 szab´alyok v´eges sokszori alkalmaz´as´aval ´all el˝o.
+
+Els˝orendu˝ logikai nyelv:  L(Vν ) = Lt(Vν ) ∪ Lf (Vν ).
+
+
+
+
+• ¬A neg´aci´os
+• A ∧ B konjukci´os
+• A ∨ B diszjunkci´os
+• A ⊃ B implik´aci´os
+• ∀xA univerz´alisan kvant´alt
+• ∃xA egzisztenci´alisan kvant´alt
+A ∀xA´es ∃xA formul´ak eset´en az A formula a kvant´alt formula t¨orzse - m´atrixa.
+
+
+Vezessu¨k be a ∀, ∃, ¬, ∧, ∨, ⊃ priorit´asi sorrendet, ekkor az
+´ıt´eletlogik´ahoz hasonl´oan defini´aljuk:
+• a z´ar´ojelelhagy´asokat
+• a mu˝veletek ´es a kvantorok hat´ask¨or´et
+• a komponens ´es pr´ımkomponens fogalmakat
+• egy formula f˝o mu˝veleti jel´et
+
+
+
+
+
+
+
+
+
+Egy formul´aban egy logikai mu˝velet hat´ask¨or´eben l´ev˝o r´eszformul´a(ka)t komponens formul´aknak nevezzu¨k.
+
+
+Megjegyz´es:  pr´ımkomponensnek nevezzu¨k azokat a pr´ımformul´akat, amelyekb˝ol a formula kiz´ar´olag a ¬, ∧, ∨, ⊃ mu˝veletek seg´ıts´eg´evel ´epu¨l fel.
+
+
+
+
+
+
+
+Term szerkezeti f´aja.
+Egy t term szerkezeti f´aja egy olyan v´eges fa, melyre teljesu¨l, hogy
+• a gy¨oker´ehez a t term van rendelve,
+• ha valamelyik csu´cs´ahoz egy tj term van rendelve, akkor az adott csu´cs gyerekeihez a tj term k¨ozvetlen r´esztermjei vannak rendelve,
+• leveleihez individuumv´altoz´ok vagy konstansok vannak rendelve.
+
+
+
+
+
+
+3Tk. 116-118.o.
+
+
+
+
+
+
+Formula szerkezeti f´aja.
+Egy F formula szerkezeti egy olyan v´eges fa, melyre teljesu¨l, hogy
+• a gy¨oker´ehez az F formula van rendelve,
+• ha valamelyik csu´cs´ahoz egy F j formula van rendelve, akkor az adott csu´cs gyerekeihez az F j formula k¨ozvetlen r´eszformul´ai vannak rendelve,
+• leveleihez atomi formul´ak vannak rendelve.
+
+
+
+
+
+
+Egy A formula logikai ¨osszetetts´ege:  A(A)
+
+
+
+
+
+
+
+
+Megjegyz´es:  Ha egy formul´aban egy v´altoz´o k¨ot¨ott, akkor
+´atnevezve ezt a v´altoz´ot a formul´aban el˝o nem fordul´o v´altoz´on´evvel a formula ekvivalens marad az eredetivel.  Ily m´odon minden formula ´at´ırhat´o v´altoz´o´atnevez´esekkel vegyes v´altoz´ot m´ar nem tartalmaz´o formul´av´a.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. rendu˝ ´all´ıt´asokat szimboliz´alnak az L nyelven a z´art formul´ak vagy mondatok.
+
+
+
+
+Alapkifejez´es
+Alapkifejez´es a v´altoz´ot nem tartalmaz´o L kifejez´es (alapformula, alapterm).  Ezeket alapp´eld´anyoknak is nevezik.  Az atomi formul´ak alapp´eld´anyait k´et csoportba soroljuk:
+1 Egy atomi formula alapatom, ha argumentumai konstans szimb´olumok vagy egy megadott univerzum elemei (pl.  P (c))
+2 Egy atomi formul´at az atomi formula alapp´eld´any´anak
+nevezzu¨k, ha argumentumai alaptermek (pl.  Q(f (a, b), a))
+
+Megjegyz´es:  Egy atomi formul´at (nem alapp´eld´any) egy´ebk´ent param´eteres ´all´ıt´asnak is neveznek.
+
+
+Logika ´es sz´am´ıt´aselm´elet
+I. r´esz Logika
+Negyedik el˝oad´as
+
+
+
+
+
+
+
+Az els˝orendu˝ logika szemantik´aja
+
+
+
+Formul´ak ´es formulahalmazok szemantikus tulajdons´agai
+
+
+
+Egy els˝orendu˝ logikai nyelv L[Vν] interpret´aci´oja egy, az L nyelvvel azonos szignatu´r´aju´ (U, R, M, K) matematikai struktu´ra.
+M´asik megfogalmaz´as:  egy, a szignatu´r´anak megfelel˝o U halmaz megad´asa, ezen a P r, F n, Cnst szimb´olumhalmazok szignatu´r´aj´aval megegyez˝o R, M , K rel´aci´o-, mu˝velet- ´es konstanshalmaz defini´al´asa.
+
+Az	interpret´aci´o mu˝k¨od´ese:	=	Srt,  P r,  F n,  Cnst
+fu¨ggv´enyn´egyes, ahol:
+• Srt : π	π, ahol ha Srt egyelemu˝, akkor az interpret´aci´o U
+univerzuma egyfajt´aju´ elemekb˝ol ´all
+• az IP r : P ›→ P I, ahol P I a struktu´ra R halmaza
+• az IF n : f ›→ f I, ahol f I a struktu´ra M halmaza
+• az ICnst : c ›→ cI, ahol cI a struktu´ra K halmaza
+
+
+
+
+
+
+
+
+|x|I,κ  az U univerzumbeli κ(x) elem.
+
+
+
+Legyen egy formula valamely L(P1, P2, . . . , Pn; f1, f2, . . . , fk) formaliz´alt nyelven, ahol (r1, r2, . . . , rn; s1, s2, . . . , sk) az L nyelv, t´ıpusa/szignatu´r´aja (ν1, ν2, ν3).
+
+1. l´ep´esV´alasztunk egy   S = U (R1, R2, . . . , Rn; o1, o2, . . . , ok) matematikai struktu´r´at, amelynek a t´ıpusa/szignatu´r´aja
+(r1, r2, . . . , rn; s1, s2, . . . , sk)/(ν1, ν2, ν3) megegyezik a nyelv´evel ´es  a logik´an k´ıvu¨li szimb´olumokat a megfelel˝o rel´aci´oknak illetve mu˝veleteknek feleltetju¨k meg:  Pi = PiI , fk = fkI  (ha az interpret´al´o struktu´r´anak nincs le´ır´o nyelve, vagy nem akarjuk azt haszn´alni.  Ha felhaszn´aljuk az interpret´al´o struktu´ra le´ır´o nyelv´et, akkor PiI  = Ri neve ´es fkI  = ok  neve.  Ez a nyelv szimb´olumainak interpret´aci´oja, ahol Ri ´es ok  jelent´ese egy´ertelmu˝).
+2. l´ep´esA nem k¨ot¨ott individuumv´altoz´ok ki´ert´ekel´ese (   x I,κ) ´es a kifejez´esek helyettes´ıt´esi ´ert´ekeinek kisz´am´ıt´asa.
+
+
+
+
+
+
+
+
+
+
+
+Formul´ak szemantik´aja
+1    P (t1, t2, . . . , tn) I,κ = i, ha ( t1 I,κ, t2 I,κ, . . . , tn I,κ)	P I, ahol a P I jel¨oli a P I rel´aci´o igazhalmaz´at.
+2   |¬A|I,κ  = ¬|A|I,κ
+|A ∧ B|I,κ  = |A|I,κ  ∧ |B|I,κ
+|A ∨ B|I,κ  = |A|I,κ  ∨ |B|I,κ
+|A ⊃ B|I,κ  = |A|I,κ  ⊃ |B|I,κ
+3 |∀xA|I,κ  = i, ha|A|I,κ∗  = i κ minden κ∗ x vari´ans´ara
+|∃xA|I,κ  = i, ha|A|I,κ∗  = i κ legal´abb egy κ∗ x vari´ans´ara
+A tov´abbiakban egyfajt´aju´ struktu´r´akkal ´es egyfajt´aju´	nyelvvel (Srt egyelemu˝ halmaz) foglalkozunk az els˝orendu˝ logika t´argyal´asa sor´an.
+
+
+
+
+
+∀xP (x, y) formula kifejt´ese
+U = {a, b, c}, formulakifejt´es κ(y) = a, b, c-re:
+  • κ(y) = a
+|∀xP (x, y)|I,κ  = |∀xP (x, a)|I  = P I(a, a) ∧ P I(b, a) ∧ P I(c, a)
+  • κ(y) = b
+|∀xP (x, y)|I,κ  = |∀xP (x, b)|I  = P I(a, b) ∧ P I(b, b) ∧ P I(c, b)
+  • κ(y) = c
+|∀xP (x, y)|I,κ  = |∀xP (x, c)|I  = P I(a, c) ∧ P I(b, c) ∧ P I(c, c)
+
+
+
+
+∀x∃y(P (x, y) ⊃ R(x, y)) formula kifejt´ese
+U = {a, b, c}
+|∀x∃y(P (x, y) ⊃ R(x, y))|I
+=
+|∃y(P (a, y) ⊃ R(a, y))|I  ∧
+|∃y(P (b, y) ⊃ R(b, y))|I  ∧
+|∃y(P (c, y) ⊃ R(c, y))|I
+=
+.(P I(c, a) ⊃ RI(c, a)) ∨ (P I(c, b) ⊃ RI(c, b)) ∨ (P I(c, c) ⊃ RI(c, c))Σ ∧
+
+
+
+
+  • L nyelv:
+= (=, P1, P2; a, b, f1, f2)
+szignatu´ra:  (2, 2, 2; 0, 0, 2, 2)
+  • A struktu´ra le´ır´o nyelve:
+S = N(=, <, >; 0, 1, +, )
+szigantu´ra:  (2, 2, 2; 0, 0, 2, 2)
+
+IP r : P → P I=P1P2=<>
+IF n : f → f Iabf1f201+∗ICnst:  nincs konstans, csak k´et db 0 v´altoz´os fu¨ggv´eny
+
+
+
+
+Az t = f1(x, f2(x, y)) term jelent´es´enek meg´allap´ıt´asa:
+|t|I,κ  = |f1(x, f2(x, y))|I,κ  =
+|f1|I (|x|I,κ, |f2(x, y)|I,κ) =
++(x, ∗(x, y)) =
+x + x ∗ y
+
+xyx + x ∗ yκ1112κ2238κ3040. . .. . .. . .. . .
+
+
+A P1(t, f1(y, f2(x, y))) formula jelent´es´enek meg´allap´ıt´asa:
+|P1(t, f1(y, f2(x, y)))|I,κ  =
+|P1|I (|t|I,κ, |f1|I (|y|I,κ, |f2|I (|x|I,κ, |y|I,κ))) =
+< (+(x, ∗(x, y)), +(y, ∗(x, y))) =
+< (x + x ∗ y, y + x ∗ y) = (x + x ∗ y) < (y + x ∗ y)
+Egy kvantormentes formula ki´ert´ekel´ese:  a formula minden alap el˝ofordul´as´at gener´aljuk ´es ´ıgy minden ´all´ıt´as el˝o´all I-ben.
+
+xy(x + x ∗ y) < (y + x ∗ y)11(1 + 1 ∗ 1) < (1 + 1 ∗ 1) = h23(2 + 2 ∗ 3) < (3 + 2 ∗ 3) = i. . .. . .. . .
+
+
+
+Egzisztenci´alis formula jelent´es´enek meg´allap´ıt´asa:
+  xP1(a, f1(x, x)) I,κ = i, ha  P1(a, f1(x, x)) I,κ∗  = i κ legal´abb egy κ∗ vari´ans´ara.
+Azaz ebben az interpret´aci´oban, ha 0 < (x + x) = i
+legal´abb egy u ∈ N eset´en.
+N´ezzu¨k meg a formula ´ert´ekt´abl´aj´at:
+
+x0 < (x + x)0h1i. . .. . .Mivel az x = 1-re a formula t¨orzse i, ez´ert a ∃x(0 < (x + x)) formula is i.
+
+
+
+
+Univerz´alis formula jelent´es´enek meg´allap´ıt´asa:
+  xP1(a, f1(b, x))) I,κ = i, ha  P1(a, f1(b, x))) I,κ∗  = i κ minden κ∗ x vari´ans´ara.
+N´ezzu¨k meg a formula ´ert´ekt´abl´aj´at:
+
+x0 < (1 + x)0i1i. . .. . .Mivel minden eg´eszre a formula t¨orzse i, ez´ert a   x(0 < (1 + x)) formula
+´ert´eke i.
+
+
+Egy 1.  rendu˝ formula pr´ımformul´ai az atomi formul´ak (ezek param´eteres
+´all´ıt´asok az interpret´aci´okban) ´es a kvant´alt formul´ak (ezek ´all´ıt´asok, ha z´artak).
+Egy 1.  rendu˝ formula pr´ımkomponensei a formula azon pr´ımformul´ai, amelyekb˝ol a formula logikai ¨osszek¨ot˝ojelek seg´ıts´eg´evel ´epu¨l fel.
+Az igazs´agt´abl´aban (´ıt´eletlogika) az els˝o sorba az ´all´ıt´asv´altoz´ok (ezek a formula pr´ımkomponensei) ´es a formula keru¨lnek.  A v´altoz´ok al´a igazs´ag´ert´ekeiket (interpret´aci´o) ´ırjuk.  A formula alatt a megfelel˝o helyettes´ıt´esi ´ert´ekek tal´alhat´ok.
+Egy 1.  rendu˝ formula ´ert´ekt´abl´aj´aban az els˝o sorba a formula szabad v´altoz´oi, a pr´ımkomponensek ´es a formula keru¨lnek.  (Mivel a pr´ımformul´ak t¨obb esetben param´eteres ´all´ıt´asok, ez´ert az interpret´aci´oban az individuumv´altoz´ok ki´ert´ekel´ese ut´an v´alnak
+´all´ıt´asokk´a.)  Az individuumv´altoz´ok al´a a lehets´eges v´altoz´oki´ert´ekel´esek, a pr´ımformul´ak al´a a megfelel˝o helyettes´ıt´esi ´ert´ekek keru¨lnek.  A formula alatt a formul´anak a pr´ımformul´ak ´ert´ekei alapj´an kisz´am´ıtott helyettes´ıt´esi ´ert´ekei tal´alhat´ok.
+
+
+
+
+
+
+
+   • Legyen az interpret´al´o struktu´ra:
+U = {1, 2, 3}, |P |I  = {1, 3},
+|Q|I  = {(1, 2), (1, 3), (2, 1), (2, 2), (2, 3)}
+
+  A  formula ´ert´ekt´abl´aja  –  p´elda	
+A formula: F = ∃xP (x) ⊃ ∃yQ(w, y) ∨ P (v) ⊃ ∀zQ(w, z)
+  • A pr´ımkomponensek: ∃xP (x), ∃yQ(w, y), P (v), ∀zQ(w, z)
+  • A szabad individuumv´altoz´ok:  v,w
+   • Legyen az interpret´al´o struktu´ra:
+U = {1, 2, 3}, |P |I  = {1, 3},
+|Q|I  = {(1, 2), (1, 3), (2, 1), (2, 2), (2, 3)}
+  • Ekkor |∃xP (x))|I  = i, a t¨obbiek param´eteres ´all´ıt´asok.
+
+
+A formula: F = ∃xP (x) ⊃ ∃yQ(w, y) ∨ P (v) ⊃ ∀zQ(w, z)
+  • A pr´ımkomponensek: ∃xP (x), ∃yQ(w, y), P (v), ∀zQ(w, z)
+  • A szabad individuumv´altoz´ok:  v,w
+   • Legyen az interpret´al´o struktu´ra:
+U = {1, 2, 3}, |P |I  = {1, 3},
+|Q|I  = {(1, 2), (1, 3), (2, 1), (2, 2), (2, 3)}
+  • Ekkor |∃xP (x))|I  = i, a t¨obbiek param´eteres ´all´ıt´asok. Az ´ert´ekt´abla:
+
+
+
+
+
+
+
+Az els˝orendu˝ logika szemantik´aja
+
+
+
+
+Formul´ak ´es formulahalmazok szemantikus tulajdons´agai
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Kiel´eg´ıthetetlens´eg
+Azt mondjuk, hogy tt formula illetve	formulahalmaz kiel´eg´ıthetetlen (nem kiel´eg´ıthet˝o), ha	-hez nincs olyan	interpret´aci´o, hogy	= tt illetve, hogy	=	.  M´as sz´oval egy tt formula kiel´eg´ıthetetlen, ha minden interpret´aci´oban a tt ´ert´ekt´abl´aj´anak minden sor´aban tt helyettes´ıt´esi ´ert´eke h(amis).  Az	formulahalmaz kiel´eg´ıthetetlen, ha az
+  k¨oz¨os ´ert´ekt´abl´aj´aban minden sorban van legal´abb egy eleme	-nek, amelynek a helyettes´ıt´esi ´ert´eke h(amis).
+
+A k´et szemantikus tulajdons´ag fenn´all´as´anak vizsg´alat´ahoz az ¨osszes inerpret´al´o struktu´r´ara szu¨ks´eg van.
+
+
+
+
+
+
+
+Legyenek rendre az L nyelv szignatu´r´aja szerint
+(r1, r2, . . . , rn; s1, s2, . . . , sk) a predik´atumszimb´olumok ´es fu¨ggv´enyszimb´olumok arit´asai.  Legyen U az univerzum, ahol |U | = M .
+A´llap´ıtsuk meg h´any ku¨l¨onb¨oz˝o (r1, r2, . . . , rn; s1, s2, . . . , sk)
+szignatu´r´aju´ struktu´ra l´etezik U felett?
+
+
+Ezekkel az arit´asokkal rel´aci´okat
+
+
+n
+
+j=1
+
+2M rj
+
+
+, m´ıg mu˝veleteket
+
+
+k
+
+t=1
+
+M M st
+
+f´elek´epp lehet defini´alni.  Az ¨osszes defini´alhat´o struktu´ra sz´ama a kett˝o
+
+szorzata: (
+ 
+n j=1
+
+2Mrj ) ∗
+ 
+k t=1
+
+M Mst .
+
+
+
+
+
+
+Als´o becsl´es eset´en csak a lehets´eges rel´aci´ok sz´am´at ´allap´ıtjuk meg.  Egy
+n v´altoz´os rel´aci´o eset´en az ´ertelmez´esi tartom´any elemsz´ama
+ U n  = M n, a rel´aci´ot megadhatjuk az U n  halmaz egy r´eszhalmaz´anak kijel¨ol´es´evel.  A lehets´eges n-v´altoz´os rel´aci´ok sz´ama megegyezik az
+´ertelmez´esi tartom´any hatv´anyhalmaza (¨osszes r´eszalmazai halmaza) sz´amoss´ag´aval	(U n) -el, ez ha U megsz´aml´alhat´oan v´egtelen, akkor kont´ınuum sz´amoss´agu´ (t¨obb mint megsz´aml´alhat´oan v´egtelen), ami algoritmikusan nem kezelhet˝o.
+
+
+
+
+
+Legyenek rendre az	nyelv szignatu´r´aja szerint (r1, r2, . . . , rn) a predik´atumszimb´olumok arit´asai.
+El˝o´all´ıtjuk minden j = 1, . . . , n ´ert´ekre az U rj   ´ert´ekeinek felhazsn´al´as´aval Prj   ¨osszes alapatomj´at, tekintsu¨k ezek egy r¨ogzitett sorrendj´et (b´azis), a szemantikus fa szintjeihez ebben a sorrendben rendelju¨k hozz´a az alapatomokat.  Egy-egy szint minden csu´cs´ab´ol pontosan k´et ´el indul ki, az egyik a szinthez rendelt alapatommal (ez jelenti, hogy az alapatom igaz az ´elhez tartoz´o interpret´aci´okban), a m´asik ennek neg´altj´aval van c´ımk´ezve (ez jelenti, hogy az alapatom hamis az ´elhez tartoz´o interpret´aci´okban).  A bin´aris fa ´agai adj´ak meg a lehets´eges interpret´aci´okat.
+
+
+
+
+
+Adott nyelv eset´en a predik´atumszimb´olumokra az ¨osszes interpret´aci´o megad´asa szemantikus f´aval.
+Legyen
+
+  • a formulahalmaz:
+K = {∀xP (x), ∀y∀z(¬Q(y, z) ∨ ¬P (z)), ∀u∀vQ(u, v)}
+  • U = {a, b, c}
+• a B b´azis:  P (a), Q(a, a), P (b), Q(a, b), . . ., Q(c, c) alapatom sorozat
+
+
+
+
+
+
+A szemantikus fa a B b´azis alapj´an:
+
+
+
+Logika ´es sz´am´ıt´aselm´elet
+I. r´esz Logika
+O¨ t¨odik el˝oad´as
+
+
+
+
+
+
+K¨ovetkezm´enyfogalom az els˝orendu˝ logik´aban
+
+
+Formul´ak logikailag ekvivalens ´atalak´ıt´asai
+
+
+Rezolu´ci´os elv- rezolu´ci´os kalkulus
+
+
+Logikai vagy szemantikus k¨ovetkezm´eny
+Azt mondjuk, hogy a tt formula logikai (szemantikus) k¨ovetkezm´enye az F formulahalmaznak, ha minden olyan I interpret´aci´ora, amelyre I |= F teljesu¨l, az I |= tt is fenn´all.
+M´as sz´oval F |= tt teljesu¨l, ha minden interpret´al´o struktu´r´aban, az F, tt k¨oz¨os ´ert´ekt´abl´aj´aban minden olyan sorban, ahol az F elemeinek helyettes´ıt´esi ´ert´eke igaz, a tt helyettes´ıt´esi ´ert´eke is igaz.
+
+Jel¨ol´es:  F |= tt vagy {F1, F2, . . . , Fn} |= tt.
+
+
+
+
+Az ´ıt´eletlogik´aban bebizony´ıtott t´etelek itt is igazak.
+
+
+Egyik eld¨ont´esprobl´ema:  tetsz˝oleges 1.rendu˝ formulahalmazr´ol eld¨onteni, hogy kiel´eg´ıthetetlen-e.
+
+
+
+
+A k¨ovetkezm´enyfogalom alapj´an, annak eld¨ont´ese, hogy F |= tt
+elm´eletileg  megoldhat´o az interpret´al´o struktu´r´akban az
+F1, F2, . . . , Fn ´es tt-re kapott k¨oz¨os ´ert´ekt´abla alapj´an.
+
+
+
+
+
+
+
+T´etel
+tt els˝orendu˝ formula.  Ha |=0 tt, akkor |= tt. (Ha tt tautol´ogia, akkor tt logikailag igaz.)
+Biz.: Ha |=0 tt, akkor tt igaz a pr´ımkomponenseinek minden igazs´agki´ert´ekel´es´ere.  Tekintsu¨k a tt egy I interpret´aci´oj´at, az individuumv´altoz´ok egy κ ki´ert´ekel´ese mellett.  Ekkor a pr´ımkomponensek igazs´ag´ert´eke kisz´amolhat´o ´es b´armi is lesz a konkr´et ´ert´eku¨k, ezut´an a tt helyettes´ıt´esi ´ert´eke i lesz (mivel a pr´ımkomponenseinek minden igazs´agki´ert´ekel´es´ere igaz).
+
+
+
+
+T´etel
+Ha F |=0 tt, akkor F |= tt.
+Biz.:  Az F pr´ımkomponenseinek minden, az F-et kiel´eg´ıt˝o I interpret´aci´oj´ara (I |=0 F) I kiel´eg´ıti tt-t is.  Ha az I interpret´aci´o kiel´eg´ıti F-et, akkor kiel´eg´ıti tt-t is mivel az egyideju˝leg a pr´ımkomponensekre vonatkoz´o igazs´agki´ert´ekel´es is.
+
+
+
+
+
+
+
+
+A m´asik eld¨ont´esprobl´ema a predik´atumlogik´aban:  tetsz˝oleges
+1. rendu˝ formul´ar´ol el kell tudni d¨onteni, hogy logikailag igaz-e.
+
+
+
+
+
+Egy n v´altoz´os ´ıt´eletlogikai B formula tautol´ogia, ha
+• hamishalmaza u¨res.  Ez azt jelenti, hogy ¬B kiel´eg´ıthetetlen.
+• az ´ıt´eletv´altoz´ok minden ki´ert´ekel´es´ere (minden interpret´aci´oban) a helyettes´ıt´esi ´ert´ek i.
+Els˝orendu˝ n v´altoz´os B formula logikailag igaz, ha
+• minden U univerzumon, a v´altoz´ok minden behelyettes´ıt´ese mellett kapott Bj alapformul´ak igazak minden, a nyelvnek megfelel˝o struktu´r´aban.
+• ¬B kiel´eg´ıthetetlen.  Egyetlen interpret´aci´oban, egyetlen v´altoz´oki´ert´ekel´es mellett sem igaz.
+Ezek a probl´em´ak szemantikailag vil´agosak, de megold´asuk a teljes kipr´ob´al´ast t´etelezi fel.  Szintaktikai eszk¨oz¨okre van szu¨ks´eg a megold´ashoz.
+
+
+
+
+
+G¨odel bebizony´ıtotta, hogy
+
+
+ A szemantikus eld¨ont´esprobl´ema ”
+
+algoritmikusan nem oldhat´o meg – nem l´etezik univerz´alis
+eld¨ont´esi algoritmus”.
+
+Kutat´asok
+
+eld¨onthet˝o formulaoszt´alyok” keres´es´ere.  Logikailag
+”
+
+ekvivalens formula´atalak´ıt´asok alkalmaz´asa mellett.
+Az egyik lehet˝os´eg, eld¨onthet˝o formulaoszt´alyokhoz tartoz´o formul´akkal le´ırt szemantikus eld¨ont´esprobl´em´ara kalkulus (d¨ont´esi elj´ar´as) keres´ese (tabl´o, rezolu´ci´os elv).
+A m´asik lehet˝os´eg, a logika szintaktikai alapon val´o fel´ep´ıt´ese, szintaktikus eld¨ont´esprobl´ema megad´asa ´es arra kalkulus kidolgoz´asa.  (Erre nem t´eru¨nk ki az el˝oad´as keretein belu¨l.)
+
+
+
+
+
+
+K¨ovetkezm´enyfogalom az els˝orendu˝ logik´aban
+
+
+Formul´ak logikailag ekvivalens ´atalak´ıt´asai
+
+
+Rezolu´ci´os elv- rezolu´ci´os kalkulus
+
+
+
+
+
+
+
+
+
+Az ´ıt´eletlogika eld¨onthet˝o formulaoszt´alyai a konjunkt´ıv norm´alforma ´es a diszjunkt´ıv norm´alforma.
+
+
+
+
+
+
+
+
+
+
+
+
+
+KDNF fel´ır´asa a formula igazs´agt´abl´aja alapj´an:
+• a formula igazhalmazbeli interpret´aci´oihoz fel´ırjuk az interpret´aci´oban igaz teljes elemi konjunkci´ot,
+• fel´ırjuk a kapott teljes elemi konjunkci´okb´ol ´all´o diszjunkci´os l´ancformul´at.
+  • Egyszeru˝s´ıt´essel el˝o´all´ıthatunk egy DNF-et. KKNF fel´ır´asa a formula igazs´agt´abl´aja alapj´an:
+• a formula hamishalmazbeli interpret´aci´oihoz fel´ırjuk az
+interpret´aci´oban hamis teljes elemi diszjunkci´ot,
+• fel´ırjuk a kapott teljes elemi diszjunkci´okb´ol ´all´o konjunkci´os l´ancformul´at.
+• Egyszeru˝s´ıt´essel el˝o´all´ıthatunk egy KNF-et
+
+A (¬(Z ⊃ ¬X) ∨ Y  formula igazs´agt´abl´aja:
+
+XYZiiii (X ∧ Y ∧ Z)iihi (X ∧ Y ∧ ¬Z)ihii (X ∧ ¬Y ∧ Z)ihhh (¬X ∨ Y ∨ Z)hiii (¬X ∧ Y ∧ Z)hihi (¬X ∧ Y ∧ ¬Z)hhih (X ∨ Y ∨ ¬Z)hhhh (X ∨ Y ∨ Z)
+KKNF: (¬X ∨ Y ∨ Z) ∧ (X ∨ Y ∨ ¬Z) ∧ (X ∨ Y ∨ Z)
+KNF (egyszeru˝s´ıt´es ut´an):  (Y ∨ Z) ∧ (X ∨ Y )
+KDNF:
+(X ∧Y ∧Z)∨(X ∧Y ∧¬Z)∨(X ∧¬Y ∧Z)∨(¬X ∧Y ∧Z)∨(¬X ∧Y ∧¬Z) 16/36
+
+
+
+
+
+
+
+Az el˝oz˝oek alapj´an tetsz˝oleges ´ıt´eletlogikai formula ´at´ırhat´o KNF vagy DNF alakba.  G¨odel szerint az eld¨ont´esprobl´ema nem algoritmiz´alhat´o, de ha egy eld¨onthet˝o formulaoszt´alyhoz tartoz´o formul´av´a ´ırjuk ´at az eld¨ont´esprobl´em´aban vizsg´alt formul´at, akkor b´ar nem algoritmussal hanem egy speci´alis levezet´esi elj´ar´assal (kalkulussal) sikeres d¨ont´esre juthatunk.
+
+
+
+
+
+
+D¨ont´esi
+
+algoritmus”, levezet˝o elj´ar´as egy olyan
+”
+
+algoritmus/l´ep´essorozat, amely adott input adatokkal dolgozik,
+azokat a megfelel˝o szab´alyok szerint haszn´alja fel, a levezet´esi szab´aly szerint alak´ıtja ´at, ´es akkor ´all meg, amikor a kitu˝z¨ott c´elt (az elj´ar´as meg´all´asi felt´etele) el´erte.  A meg´all´assal egy k´etes´elyes d¨ont´es egyik kimenet´et igazolja.  Azonban, ha az algoritmus nem
+´eri el a kitu˝z¨ott c´elt, az nem felt´etlenu¨l jelenti azt, hogy meghozta a m´asik eshet˝os´egre a d¨ont´est.  Egy ilyen elj´ar´ast kalkulusnak h´ıvunk.
+
+
+
+
+
+Az egyik eld¨ont´esprobl´ema megold´as´ara - egy formula kiel´eg´ıthetetlens´eg´enek eld¨ont´es´ere t¨obb d¨ont´esi algoritmus ismert.  Ezekr˝ol bebizony´ıthat´o, hogy ha a formula felhaszn´al´as´aval az algoritmus el´eri a meg´all´asi felt´etelt, akkor a formula kiel´eg´ıthetetlen (vagyis, ha a formula az F1 ∧ F2 ∧ · · · ∧ Fn ∧ ¬tt, akkor bebizony´ıtottuk, hogy {F1, F2, . . . , Fn} |=0 tt.)
+Azt is mondjuk, hogy az ilyen kalkulusok automatikus t´etelbizony´ıt´o kalkulusok.
+
+
+
+
+
+
+K¨ovetkezm´enyfogalom az els˝orendu˝ logik´aban
+
+
+Formul´ak logikailag ekvivalens ´atalak´ıt´asai
+
+
+Rezolu´ci´os elv- rezolu´ci´os kalkulus
+
+
+
+Egy KNF alaku´ formula kiel´eg´ıthetetlens´eg´enek vizsg´alata a KNF-ben szerepl˝o kl´ozok S halmaza kiel´eg´ıthetetlens´eg´enek vizsg´alat´aval ekvivalens.  Hogyan lehet eld¨onteni, hogy egy S kl´ozhalmaz kiel´eg´ıthetetlen?  Meg kell mutatni, hogy az S
+´ıt´eletv´altoz´oinak tetsz˝oleges interpret´aci´oj´aban legal´abb egy C ∈ S hamis.  Egy C kl´oz hamis egy interpret´aci´oban, ha minden liter´alja hamis.
+Ha az ¨osszes interpret´aci´ot az S ¨osszes ´ıt´eletv´altoz´oinak r¨ogz´ıtett sorrendje/b´azis alapj´an el˝o´all´o szemantikus f´aval adjuk meg, akkor egy C ´ıt´eletlogikai kl´oz abban az interpret´aci´oban hamis, amelyikben a kl´oz mindegyik liter´aljai ellenkez˝o neg´alts´agu´.  Az
+X ∨ Z kl´oz hamis az ¬XY ¬Z ´es az ¬X¬Y ¬Z interpret´aci´okban, az interpret´aci´o kiv´alaszt´as´at a kl´oz szemantikus f´ara illeszt´es´enek h´ıvjuk.
+
+
+
+Fogalmak
+Egy kl´oz illeszt´ese a szemantikus f´ara az olyan ´agak kiv´alaszt´asa, amelyeken a kl´oz minden liter´alja neg´alva szerepel.  Ezekben az interpret´aci´okban ez a kl´oz hamis.
+C´afol´o csu´csnak nevezzu¨k a szemantikus fa azon csu´cs´at, amelyiket el´erve egy kl´oz (amely azt megel˝oz˝oen m´eg nem volt hamis) hamiss´a v´alik.
+Levezet˝o csu´csnak nevezzu¨k a szemantikus fa azon csu´cs´at, amelyiket k¨ovet˝o mindk´et csu´cs c´afol´o csu´cs.
+A szemantikus fa egy ´aga z´art, ha c´afol´o csu´csban v´egz˝odik.
+A szemantikus fa z´art, ha minden ´aga z´art.
+
+
+S =	Y ∨ ¬Z, X ∨ Z, ¬X ∨ ¬Y, ¬X ∨ Z, ¬Z	kiel´eg´ıthetlen kl´ozhalmaz.
+Jel¨ol´esek:  c´afol´o csu´cs (•), levezet˝o csu´cs (◦)
+Z´art szemantikus fa:
+
+Y ∨ ¬Z  ¬X ∨ Z	¬Z	X ∨ Z Y ∨ ¬Z X ∨ Z
+
+
+
+
+
+A kl´ozhalmaz kiel´eg´ıthetetlens´eg´enek eld¨ont´es´ere nem a szemantikus f´at haszn´aljuk, de fontos h´att´ereszk¨oz marad a rezolu´ci´os kalkulus tulajdons´againak vizsg´alat´aban.
+Elnevez´esek:
+• n-v´altoz´os kl´oz	n-argumentumos kl´oz
+• 1-v´altoz´os kl´oz	egys´egkl´oz
+• 0-v´altoz´os kl´oz	u¨res kl´oz:  Q
+
+
+
+Egyszeru˝s´ıt´esi szab´aly:  ha X ´ıt´eletv´altoz´o ´es C egy X-et nem tartalmaz´o kl´oz, akkor (X ∨ C) ∧ (¬X ∨ C) ∼0 C
+Az (X) ∧ (¬X) ∼0 Q – azonosan hamis.
+
+
+
+
+
+
+
+
+Rezolu´ci´os levezet´es (Tk.229.o.)
+Egy S kl´ozhalmazb´ol val´o rezolu´ci´os levezet´es egy olyan v´eges
+k1, k2, . . . , km (m ≥ 1) kl´ozsorozat, ahol minden j = 1, 2, . . . , m-re
+1 vagy kj ∈ S,
+2 vagy van olyan 1 ≤ s, t < j, hogy kj  a (ks, kt) kl´ozp´ar rezolvense.
+A levezet´es c´elja az u¨res kl´oz levezet´ese (ez a meg´all´asi felt´etel).
+
+
+
+
+S kl´ozhalmazb´ol val´o rezolu´ci´os levezet´es d¨ont´esi elj´ar´as. Eld¨ont´esprobl´em´aja:  levezethet˝o-e egy S kl´ozhalmazb´ol az u¨res kl´oz?
+Rezolu´ci´os c´afolatnak nevezzu¨k azt a t´enyt, hogy S-b˝ol levezethet˝o az u¨res kl´oz.
+
+
+A rezolu´ci´os kalkulus helyes (Tk.230.o.)
+(6.3.12) Lemma:  Legyen S tetsz˝oleges kl´ozhalmaz ´es k1, k2 . . . , kn
+kl´ozsorozat rezolu´ci´os levezet´es S-b˝ol.  Ekkor minden
+kj, j = 1, 2 . . . , n-re szemantikus k¨ovetkezm´enye S-nek.
+(6.3.13) T´etel:  Legyen S tetsz˝oleges kl´ozhalmaz.  Ha S-b˝ol levezethet˝o az u¨res kl´oz, akkor S kiel´eg´ıthetetlen.
+Bizony´ıt´asok indukci´oval, illetve indirekt bizony´ıt´assal.
+
+
+
+
+1 j := 0, Sj := S, LIST := ∅.
+2 A´ll´ıtsuk el˝o Sj  szemantikus f´aj´at.  nj := a szemantikus fa szintjeinek sz´ama.  Ha nj = 0, akkor levezettu¨k az u¨res kl´ozt, a levezet´es LIST -b˝ol kiolvashat´o.
+3 Egy´ebk´ent v´alasszuk ki a fa egy levezet˝o csu´cs´at.  A levezet˝o
+csu´csot tartalmaz´o k´et ´agra illesztett kl´ozok legyenek kjj  ´es
+kjjj, rezolvensu¨k pedig kj.  Tegyu¨k a LIST  v´eg´ere a kjj , kjjj, kj
+kl´ozokat.
+4 Sj+1 := Sj ∪ {kj}, j := j + 1.  Folytassuk a 2. l´ep´essel.
+
+
+
+
+P´elda - adott rezolu´ci´os levezet´es levezet´esi f´aja
+X ∨ Z	¬X ∨ Z	X ∨ ¬Z	¬X ∨ ¬Z
+
+
+Z	¬Z
+
+Q
+
+
+
+S1 = {X ∨ ¬Z, ¬X ∨ Z, X ∨ Z, ¬X ∨ ¬Z}
+
+1.	X ∨ Z	[ ∈ S1 ]
+2.	¬X ∨ Z	[ ∈ S1 ]
+3. Z	[ 1, 2 rezolvense ]
+4.	X ∨ ¬Z	[ ∈ S1 ]
+5.	¬X ∨ ¬Z	[ ∈ S1 ]
+6. ¬Z	[ 4, 5 rezolvense ]
+7. Q	[ 3, 6 rezolvense ]
+
+
+
+
+
+centr´alis kl´ozok	mell´ekkl´ozok
+
+k1	A1
+ 
+k2	A2
+ 
+k3
+
+
+
+ki−1	Ai−1
+ki
+
+
+
+k1 A1
+k2 A2
+k3
+
+
+
+km−1
+Am−1
+km
+
+
+
+line´aris rezolu´ci´o
+
+
+
+
+
+
+
+Reuzolu´ci´os strat´egi´ak:  line´aris rezolu´ci´o (helyes ´es teljes), line´aris input-, egys´eg rezolu´ci´o (helyes de nem teljes) - Tk.236-238.o.
+Az el˝oad´asban nem szerepl˝o tov´abbi rezolu´ci´os strat´egi´ak:  Tk.281-300.o.
+
+
+
+
+
+
+
+
+
+
+
+S = {B ∨ ¬C, A ∨ ¬C, ¬A ∨ ¬B, ¬A ∨ C, C}
+1.	B ∨ ¬C	∈ S	1.	B ∨ ¬C	∈ S
+2.	¬A ∨ ¬B	∈ S	2.	C	∈ S
+3.	¬A ∨ ¬Crez	(1, 2)	3.	B	rez(1, 2)
+4.	A ∨ ¬C	∈ S	4.	¬A ∨ ¬B	∈ S
+5.	¬Crez	(3, 4)	5.	¬A	rez(3, 4)
+6.	C	∈ S	6.	A ∨ ¬C	∈ S
+7.	Q	rez(5, 6)	7.	¬C	rez(5, 6)
+8.	Q	rez(2, 7)
+line´aris input rez.	egys´egrezolu´ci´o
+
+
+
+
+
+
+
+
+
+
+Teljes levezet´esi fa adott kl´ozzal kezd˝od˝o ¨osszes line´aris levezet´es megad´as´ara.
+Legyen S = {X ∨ Z, ¬X ∨ Z, ¬Y ∨ ¬Z, ¬X ∨ Y, ¬Z}.
+X ∨ Z
+Y ∨ Z	Z	X ∨ ¬Y	X
+
+¬Z	¬Y ∨ ¬Z	¬Z	¬X ∨ Z	¬X ∨ Z	¬X ∨ Y
+
+Y	¬Y	Q	¬Y ∨ Z	Z	Y
+
+¬X ∨ Y	¬Z	¬Z
+
+¬X	¬Y	Q
+
+
+Logika ´es sz´am´ıt´aselm´elet
+I. r´esz Logika
+Hatodik el˝oad´as
+
+
+
+
+
+
+
+
+
+Els˝orendu˝ rezolu´ci´os kalkulus - el˝ok´esz´ıt˝o fogalmak
+
+
+
+
+Eld¨onthet˝o formulaoszt´alyok keres´ese els˝orendu˝ logik´aban.
+
+
+
+
+
+
+
+
+
+
+Az ´ıt´eletlogikai kl´ozhalmaz (KNF) els˝orendu˝ megfelel˝oje az els˝orendu˝ kl´ozhalmaz (els˝orendu˝ kl´ozok konjunkci´oja) lehetne.
+
+
+
+
+
+
+
+A feladat tetsz˝oleges els˝orendu˝ formula ´at´ır´asa els˝orendu˝ kl´ozok konjunkci´os formul´aj´av´a.  Az eld¨ont´esprobl´ema els˝orendu˝ kl´ozhalmaz kiel´eg´ıthetetlens´eg´enek eld¨ont´ese.
+Ha egy univerz´alis formul´at kifejtu¨nk egy U univerzum felett, akkor a mag alapp´eld´anyainak konjunkci´oja lesz U -ekvivalens az eredeti formul´aval.
+
+
+
+
+
+
+Ha els˝orendu˝ kl´ozok halmaz´aval tesszu¨k ugyanezt, akkor alapkl´ozok hamaz´at kapjuk.  A kifejtett kl´ozhalmaz kiel´eg´ıthetetlens´ege a kapott U feletti alapkl´ozok halmaz´anak kiel´eg´ıthetetlens´eg´evel ekvivalens.
+Az alapkl´ozokra a rezolu´ci´os kalkulust ugyanu´gy defini´alhatjuk mint az ´ıt´eletlogik´aban – alaprezolu´ci´o (Tk.251-254.o.).  Alaprezolu´ci´oval b´armely adott U univerzumon val´o kiel´eg´ıthetetlens´eg eld¨onthet˝o.
+
+
+Els˝orendu˝ kl´ozhalmaz:
+S = {∀x∀y(P (x) ∨ ¬Q(x, f (y)), ∀u¬P (u), ∀z∀wQ(z, f (w))}
+U = {a, b, c} univerzum feletti kifejtett kl´ozhalmaz:
+P (a) ∨ ¬Q(a, f (a)), P (a) ∨ ¬Q(a, f (b)), P (a) ∨ ¬Q(a, f (c)),
+P (b) ∨ ¬Q(b, f (a)), P (b) ∨ ¬Q(b, f (b)), P (b) ∨ ¬Q(b, f (c)),
+P (c) ∨ ¬Q(c, f (a)), P (c) ∨ ¬Q(c, f (b)), P (c) ∨ ¬Q(c, f (c)),
+¬P (a), ¬P (b), ¬P (c), Q(a, f (a)), Q(a, f (b)), Q(a, f (c)),	Σ
+Q(b, f (a)), Q(b, f (b)), Q(b, f (c)), Q(c, f (a)), Q(c, f (b)), Q(c, f (c))
+Alaprezolu´ci´os levezet´es:
+
+1  P (a) ∨ ¬Q(a, f (a))	∈ S
+2   Q(a, f (a))	∈ S
+3   P (a)	res(1,2)
+4  ¬P (a)	∈ S
+5   Q	res(3,4)
+
+
+
+
+
+
+
+
+
+Hogyan lehet el˝o´all´ıtani a vizsg´aland´o formul´at els˝orendu˝ kl´ozok konjunkci´ojak´ent?
+1 Tetsz˝oleges formula ´at´ırhat´o prenex alakba.
+2 Tetsz˝oleges prenex formula ´at´ırhat´o Skolem alakba.
+3 Tetsz˝oleges Skolem norm´alforma fel´ırhat´o els˝orendu˝ kl´ozok konjunkci´ojak´ent.
+
+
+
+Az ´atalak´ıt´ashoz szu¨ks´eges ´atalak´ıt´asi szab´alyok.
+
+A´ltal´anos De Morgan szab´alyok
+¬∀xA ∼ ∃x¬A
+ 	¬∃xA ∼ ∀x¬A	
+Kvantorkiemel´esi szab´alyok
+(1)	∀xA[x] ∧ B ∼ ∀x(A[x] ∧ B)
+∀xA[x] ∨ B ∼ ∀x(A[x] ∨ B)
+(2)	∃xA[x] ∧ B ∼ ∃x(A[x] ∧ B)
+∃xA[x] ∨ B ∼ ∃x(A[x] ∨ B)
+
+
+
+
+
+
+Kvantorkiemel´esi szab´alyok
+(3)	∀xA[x] ∧ ∀xB[x] ∼ ∀x(A[x] ∧ B[x]) , de ∨-re nem
+(4)	∃xA[x] ∨ ∃xB[x] ∼ ∃x(A[x] ∨ B[x]) , de ∧-re nem
+(5)	Q1xA[x] ∧ Q2xB[x] ∼ Q1xQ2z(A[x] ∧ B[x/z])
+(6)	Q1xA[x] ∨ Q2xB[x] ∼ Q1xQ2z(A[x] ∨ B[x/z])
+
+
+
+
+
+
+1 A logikai ¨osszek¨ot˝ojelek ´at´ır´asa ¬, ∧, ∨-ra.
+2 A De Morgan szab´alyok alkalmaz´asa addig am´ıg a ¬
+hat´ask¨ore atomi formula nem lesz.
+3 A kvantorkiemel´esi szab´alyok alkalmaz´asa addig am´ıg minden kvantor a formula elej´ere nem keru¨l (a formula t¨orzse kvantormentes formula).
+
+
+
+
+∀x(∀yP (x, y) ∧ ∃y¬(Q(y) ⊃ P (x, a))) ⊃ ¬∀x∃y(P (y, x) ⊃ R(x, y))
+
+• 1.  l´ep´es
+¬(∀x(∀yP (x, y)∧∃y¬(¬Q(y)∨P (x, a)))∨¬∀x∃y(¬P (y, x)∨R(x, y))
+• 2.  l´ep´es
+∃x¬(∀yP (x, y)∧∃y¬(¬Q(y)∨P (x, a)))∨∃x¬∃y(¬P (y, x)∨R(x, y))
+∃x(¬∀yP (x, y)∨¬∃y¬(¬Q(y)∨P (x, a)))∨∃x∀y¬(¬P (y, x)∨R(x, y))
+∃x(∃y¬P (x, y)∨∀y¬¬(¬Q(y)∨P (x, a)))∨∃x∀y(P (y, x)∧¬R(x, y))
+∃x(∃y¬P (x, y) ∨ ∀y(¬Q(y) ∨ P (x, a))) ∨ ∃x∀y(P (y, x) ∧ ¬R(x, y))
+
+
+• 3.  l´ep´es (kvantorkiemel´esi szab´alyok)
+∃x(∃y¬P (x, y)∨∀y(¬Q(y)∨P (x, a))∨∀y(P (y, x)∧¬R(x, y))).
+∃y kiemel´es´ehez el˝osz¨or v´egrehajtjuk az y/y1 helyettes´ıt´est a
+∀y-al kezd˝od˝o els˝o r´eszformul´aban ´es az y/y2 helyettes´ıt´est a
+∀y-al kezd˝od˝o m´asodik r´eszformul´aban.
+∃x(∃y¬P (x, y)∨∀y1(¬Q(y1)∨P (x, a))∨∀y2(P (y2, x)∧¬R(x, y2)))
+∃x∃y(¬P (x, y)∨∀y1(¬Q(y1)∨P (x, a))∨∀y2(P (y2, x)∧¬R(x, y2)))
+Utols´o l´ep´es:
+∃x∃y∀y1∀y2(¬P (x, y)∨(¬Q(y1)∨P (x, a))∨(P (y2, x)∧¬R(x, y2)))
+Megkaptuk a prenex formul´at.  A mag DNF.
+Ha a prenex formula t¨orzse KNF-ben vagy DNF-ben van, akkor a formula norm´alforma:  prenex konjunkt´ıv / prenex diszjunkt´ıv formula.
+
+
+
+
+
+Tekintsu¨k az els˝o egzisztenci´alis kvantort a prefixumban, legyen ez
+∃xj.  Ha a formula igaz egy interpret´aci´oban, akkor az              x1, x2, . . . , xj−1 v´altoz´ok minden ´ert´ekkombin´aci´oj´ahoz l´etezik legal´abb egy ´ert´eke az xj  v´altoz´onak amelyre a formula ´ert´eke i. Ezt a t´enyt az f (x1, x2, . . . , xj−1) = xj  (Skolem) fu¨ggv´ennyel fejezzu¨k ki.  Ez a fu¨ggv´eny rendeli az xj -hez a megfelel˝o ´ert´eket az x1, x2, . . . , xj−1 v´altoz´ok minden v´altoz´oki´ert´ekel´ese eset´en.  Ezt a l´ep´est v´egrehajtjuk a soronk¨ovetkez˝o egzisztenci´alis kvantorra addig am´ıg, minden egzisztenci´alis kvantort nem elimin´altunk.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A Skolem norm´alforma magja KNF, az els˝orendu˝ nyelv liter´aljaib´ol fel´ırt kl´ozok konjunkci´os l´anca.
+P´elda
+∀x∀y∀y1((¬P (x, y) ∨ Q(y1)) ∧ (R(y, f (x) ∨ P (x, a))
+∧ (P (x, y1) ∨ ¬R(x, y)))
+A konjunkci´os l´ancban a 3.  kvantorkiemel´esi szab´aly alkalmazhat´o. ´Igy a formula els˝orendu˝ kl´ozok konjunkci´os l´ancak´ent fel´ırt alakja:
+∀x∀y∀y1(¬P (x, y) ∨ Q(y1)) ∧ ∀x∀y∀y1(R(y, f (x)) ∨ P (x, a))
+∧ ∀x∀y∀y1(P (x, y1) ∨ R(x, y))
+
+
+Els˝orendu˝ kl´ozokb´ol ´all´o konjunkci´os l´anc kiel´eg´ıthetetlens´eg´enek vizsg´alata.
+Mivel egy kvant´alt formula ´ert´eke nem fu¨gg a benne szerepl˝o k¨ot¨ott v´altoz´o ´ert´ek´et˝ol, ezeket a v´altoz´okat ´at lehet nevezni.
+A´talak´ıthat´o v´altoz´oidegen els˝orendu˝ kl´ozhalmaz kiel´eg´ıthetetlens´eg´enek vizsg´alat´av´a.
+
+
+
+
+
+
+Ha egy formula azonosan igaz |U | = n sz´amoss´agon, akkor enn´el kisebb sz´amoss´agon is azonosan igaz.  (Tk.257.o.)
+
+Ha egy formula kiel´eg´ıthet˝o |U | = n sz´amoss´agon, akkor enn´el nagyobb sz´amoss´agon is kiel´eg´ıthet˝o.(Tk.258.o.)
+
+L¨owenheim-Skolem t´etel Tk.258.o.
+Ha egy formula kiel´eg´ıthet˝o egy´altal´an, akkor kiel´eg´ıthet˝o legfeljebb megsz´aml´alhat´oan v´egtelen U -n.
+
+
+
+
+
+
+A kiel´eg´ıthetetlens´egre hasonl´o t´etelek nincsenek.
+Egy S els˝orendu˝ kl´ozhalmaz kiel´eg´ıthetetlen, ha minden interpret´aci´oban legal´abb egy kl´oza hamis.
+Egy els˝orendu˝ kl´oz hamis egy interpret´aci´oban, ha az interpret´al´o struktu´ra U univerzum´an kifejtve a magb´ol kapott alapkl´ozok k¨ozu¨l legal´abb egy hamis ebben az interpret´aci´oban.
+
+
+
+Egy S els˝orendu˝ kl´ozhalmaz kiel´eg´ıthetetlen U felett, ha az U -n defini´alhat´o minden struktu´r´aban az alapkl´ozok halmaza kiel´eg´ıthetetlen.  Ha az S els˝orendu˝ kl´ozhalmazb´ol az adott sz´amoss´agu´ univerzumon a kifejt´essel megkapott alapkl´ozok halmaz´ab´ol alaprezolu´ci´oval levezethet˝o az u¨res kl´oz, akkor a kl´ozhalmaz ezen az univerzumon kiel´eg´ıthetetlen.  Ha egy S kiel´eg´ıthetetlen egy |U | = n sz´amoss´agu´ univerzumon, m´eg lehet nagyobb sz´amoss´agon kiel´eg´ıthet˝o.
+
+
+
+
+
+
+Herbrand megmutatta, hogy ha tekintju¨k az els˝orendu˝ kl´ozhalmaz le´ır´o nyelv´enek alaptermjeib˝ol ´all´o halmazt a Herbrand-univerzumot (H-t), akkor a kl´ozhalmaz akkor lesz kiel´eg´ıthetetlen, ha H-n kiel´eg´ıthetetlen.  Minden els˝orendu˝ nyelvhez (els˝orendu˝ kl´ozhalmazhoz) l´etezik legfeljebb megsz´aml´alhat´oan v´egtelen sz´amoss´agu´ Herbrand-univerzum.
+Egy els˝orendu˝ kl´ozhalmaz kiel´eg´ıthetetlen akkor ´es csak akkor, ha Herbrand-univerzum´an kiel´eg´ıthetetlen.
+
+
+
+
+
+Herbrand-univerzum konstrukci´oja l´ep´esr˝ol l´ep´esre:
+1 H0 = {S-ben el˝ofordul´o konstansok halmaza} vagy ha a kl´ozhalmazban nincs konstans szimb´olum, akkor egy szimbolikus konstans {a}.
+2 Hi+1 = Hi ∪ Fi, ahol Fi azon alaptermek halmaza, amelyeket Hi elemeinek a kl´ozhalmazban l´ev˝o fu¨ggv´enyszimb´olumokba val´o behelyettes´ıt´es´evel kapjuk.
+3 H∞ =		Hk k∈N
+
+
+P´elda
+Tekintsu¨k az S = {P (x),  ¬Q(y, z) ∨ ¬P (z),  Q(u, f (u))} kl´ozhalmazt.
+H0 = {a} - fikt´ıv konstans
+H1 = {a, f (a)}
+Hj = {a, f (a), f (f (a)), . . . , f (. . . f (a) . . .)} - j-szeres iter´aci´o
+H∞ = {a, f (a), f (f (a)), . . . , f (. . . f (a) . . .), . . .}
+Alapkl´ozhalmaz a Herbrand-univerzum felett:
+S = {P (a), ¬Q(a, a) ∨ ¬P (a), Q(a, f (a)), P (f (a)),
+¬Q(a, f (a)) ∨ ¬P (f (a)), . . .}
+Alaprezolu´ci´os levezet´es:
+1	Q(a, f (a))	P (f (a))	S
+2    P (f (a))	S
+3	Q(a, f (a))	res(1,2)
+4   Q(a, f (a))	S
+5   Q	res(3,4)
+
+
+
+
+
+
+
+
+
+Herbrand-interpret´aci´o
+Legyen az S kl´ozhalmaz le´ır´o nyelve (Pr, Fn, Cnst ),
+Herbrand-univerzuma pedig H.  Herbrand-interpret´aci´oinak nevezzu¨k ´es IH-vel jel¨olju¨k a nyelv azon interpret´aci´oit, melyek univerzuma ´eppen H, ´es
+− minden c ∈ Cnst konstansszimb´olumhoz a c ∈ H
+univerzumelemet (¨onmag´at) rendeli, ´es
+− minden k arit´asu´ f ∈ F n fu¨ggv´enyszimb´olumhoz hozz´arendeli azt az f IH : Hk  → H mu˝veletet, amelyikre minden             h1, h2, . . . , hk ∈ H eset´en
+f IH (h1, h2, . . . , hk) = f (h1, h2, . . . , hk).
+
+Egy S els˝orendu˝ kl´ozhalmaz Herbrand-interpret´aci´oi teh´at csak az S-ben el˝ofordul´o predik´atumszimb´olumok interpret´al´as´aban ku¨l¨onb¨oznek.
+
+
+
+
+
+Az el˝oz˝oek alapj´an, ha adva van az S els˝orendu˝ kl´ozhalmaz egy IH Herbrand-interpret´aci´oja, azt a k¨ovetkez˝o m´odon is le´ırhatjuk: Legyen {A1, A2, . . .} az S kl´ozhalmaz Herbrand-b´azisa ´es legyen
+L  =	Ai,	ha Ai igaz IH-ban,
+¬Ai,	ha Ai hamis IH-ban.
+Ekkor a IH Herbrand-interpret´aci´ot az {L1, L2, . . . }
+alapliter´al-halmaz egy´ertelmu˝en megadja.
+
+
+
+P´elda
+Legyen S = {P (x) ∨ Q(x), R(f (y))}. S Herbrand-univerzuma:
+H = {a, f (a), f (f (a)), f (f (f (a))), . . .}.
+S egy Herbrand-b´azisa:
+
+{P (a), Q(a), R(a), P (f (a)), Q(f (a)), R(f (a)), . . .}.
+N´eh´any Herbrand-interpret´aci´o:
+
+I1	=	{P (a), Q(a), R(a), P (f (a)), Q(f (a)), R(f (a)), . . . }
+I2	=	{¬P (a), ¬Q(a), ¬R(a), ¬P (f (a)), ¬Q(f (a)), ¬R(f (a)), . . . }
+I3	=	{P (a), Q(a), ¬R(a), ¬P (f (a)), Q(f (a)), ¬R(f (a)), . . . }
+
+
+Az I1, I2 ´es I3 interpret´aci´ok szeml´eltet´ese az el˝oz˝o Herbrand-b´azis felhaszn´al´as´aval k´eszu¨l szemantikus f´an:
+
+
+
+P (a)	¬P (a)
+
+
+Q(a)	¬Q(a)	Q(a)	¬Q(a)
+
+
+R(a)	¬R(a)	¬R(a)
+
+
+P (f (a))	¬P (f (a))	¬P (f (a))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+El˝o´all´ıtjuk az els˝orendu˝ kl´ozok magjainak ¨osszes alapp´eld´any´at ´es az alapkl´ozok halmaz´an ´ıt´eletlogikai rezolu´ci´oval levezetju¨k az u¨res kl´ozt.
+Az els˝orendu˝ kl´ozhalmaz:
+{∀x∀y(P (x) ∨ ¬Q(x, f (y))),
+∀z∀v(¬P (g(z)) ∨ ¬P (v)),
+∀u(Q(g(u), u))}
+Herbrand-univerzum:
+{a, g(a), f (a), g(f (a)), g(g(a)), f (f (a)), f (g(a)), . . . }
+(A kl´ozhalmaz le´ır´o nyelv´enek ¨osszes alaptermje)
+
+
+
+Alapkl´ozok ku¨l¨onb¨oz˝o helyettes´ıt´esek eset´en:
+xyzvu{P (x) ∨ ¬Q(x, f (y)),
+¬P (g(z)) ∨ ¬P (v),
+Q(g(u), u)}aaaaa{P (a) ∨ ¬Q(a, f (a)),
+¬P (g(a)) ∨ ¬P (a),
+Q(g(a), a)}g(a)aag(a)a{P (g(a)) ∨ ¬Q(g(a), f (a)),
+¬P (g(a)) ∨ ¬P (g(a)), Q(g(a), a)}g(a)aag(a)f (a){P (g(a)) ∨ ¬Q(g(a), f (a)),
+¬P (g(a)) ∨ ¬P (g(a)),
+Q(g(f (a)), f (a))}g(f (a))af (a)g(f (a))f (a){P (g(f (a))) ∨ ¬Q(g(f (a)), f (a)),
+¬P (g(f (a))) ∨ ¬P (g(f (a))),
+Q(g(f (a)), f (a))}
+
+
+
+
+
+Alaprezolu´ci´o:
+1. Q(g(f (a)), f (a))	u	f (a)	1. X
+2.  P (g(f (a)))	Q(g(f (a)), f (a))	x	g(f (a)), y	a	2.  Y	X
+3.   P (g(f (a)))	3. Y
+4.	P (g(f (a)))	z	f (a), v	g(f (a))	4.	Y
+5.  Q	5. Q
+Legyen a b´azis els˝o k´et eleme P (g(f (a))), Q(g(f (a)), f (a)). Illesszu¨k szemantikus f´ara az alapkl´ozhalmazt.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
